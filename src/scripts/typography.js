@@ -58,19 +58,19 @@ async function generateTypographyTokens() {
                 textCase: style.style.textCase,
             };
 
-            // Remove undefined properties
+            // Remove undefined values
             Object.keys(styleObject).forEach(
                 (key) =>
                     styleObject[key] === undefined && delete styleObject[key]
             );
 
-            if (name.startsWith("heading-")) {
+            if (style.name.includes("Heading/")) {
                 formattedStyles.typography.headings[name] = styleObject;
-            } else if (name.startsWith("body-")) {
+            } else if (style.name.includes("Body/")) {
                 formattedStyles.typography.body[name] = styleObject;
-            } else if (name.startsWith("label-")) {
+            } else if (style.name.includes("Label/")) {
                 formattedStyles.typography.labels[name] = styleObject;
-            } else if (name.startsWith("subheading-")) {
+            } else if (style.name.includes("Subheading/")) {
                 formattedStyles.typography.subheadings[name] = styleObject;
             }
         });
