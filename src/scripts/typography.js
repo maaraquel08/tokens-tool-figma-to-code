@@ -4,7 +4,12 @@ const { getNodeDetails, getFigmaStyles } = require("../utils/figma");
 
 async function generateTypographyTokens() {
     try {
+        console.log("🔍 Fetching styles from Figma...");
         const data = await getFigmaStyles();
+
+        if (!data || !data.meta || !data.meta.styles) {
+            throw new Error("No styles found in Figma response");
+        }
 
         const textStyles = data.meta.styles.filter(
             (style) =>
@@ -13,6 +18,8 @@ async function generateTypographyTokens() {
                 style.name.includes("Label/") ||
                 style.name.includes("Subheading/")
         );
+
+        console.log(`📝 Found ${textStyles.length} typography styles`);
 
         const styleDetails = await Promise.all(
             textStyles.map(async (style) => {
@@ -80,17 +87,22 @@ async function generateTypographyTokens() {
             fs.mkdirSync(outputDir, { recursive: true });
         }
 
-        fs.writeFileSync(
-            path.join(outputDir, "typography.json"),
-            JSON.stringify(formattedStyles, null, 2)
-        );
+        const outputPath = path.join(outputDir, "typography.json");
+        fs.writeFileSync(outputPath, JSON.stringify(formattedStyles, null, 2));
 
         console.log(
             "✅ Typography tokens have been exported to output/tokens/typography.json"
         );
+        return true;
     } catch (error) {
-        console.error("Error generating typography tokens:", error);
+        console.error("❌ Error generating typography tokens:", error.message);
+        return false;
     }
 }
 
+// Add this line to execute the function when running the script directly
 generateTypographyTokens();
+
+module.exports = {
+    generateTypographyTokens,
+};
