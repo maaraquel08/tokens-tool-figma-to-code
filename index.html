@@ -15,105 +15,145 @@
         <!-- Load your styles after fonts -->
         <link href="./dist/styles.css" rel="stylesheet" />
     </head>
-    <body class="tw-p-8">
-        <!-- Font Family Tests -->
-        <div class="tw-mb-8">
-            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Font Family Tests</h2>
-            <p class="tw-font-main">Main Font (Rubik)</p>
-            <p class="tw-font-inbound">Inbound Font (Roboto)</p>
-            <p class="tw-font-code">Code Font (Roboto Mono)</p>
-        </div>
-
-        <!-- Font Size Tests -->
-        <div class="tw-mb-8">
-            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Font Size Tests</h2>
-            <p class="tw-text-100">Text 100 (12px)</p>
-            <p class="tw-text-200">Text 200 (14px)</p>
-            <p class="tw-text-300">Text 300 (16px)</p>
-            <p class="tw-text-400">Text 400 (20px)</p>
-            <p class="tw-text-500">Text 500 (24px)</p>
-            <p class="tw-text-600">Text 600 (28px)</p>
-            <p class="tw-text-700">Text 700 (32px)</p>
-            <p class="tw-text-800">Text 800 (40px)</p>
-            <p class="tw-text-900">Text 900 (48px)</p>
-            <p class="tw-text-1000">Text 1000 (56px)</p>
-        </div>
-
-        <!-- Line Height Tests -->
-        <div class="tw-mb-8">
-            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Line Height Tests</h2>
-            <p class="tw-leading-100">Leading 100 (12px)</p>
-            <p class="tw-leading-200">Leading 200 (14px)</p>
-            <p class="tw-leading-300">Leading 300 (16px)</p>
-            <p class="tw-leading-400">Leading 400 (20px)</p>
-            <p class="tw-leading-500">Leading 500 (24px)</p>
-            <p class="tw-leading-600">Leading 600 (32px)</p>
-            <p class="tw-leading-700">Leading 700 (36px)</p>
-            <p class="tw-leading-800">Leading 800 (40px)</p>
-            <p class="tw-leading-900">Leading 900 (48px)</p>
-            <p class="tw-leading-1000">Leading 1000 (60px)</p>
-        </div>
-
-        <!-- Letter Spacing Tests -->
-        <div class="tw-mb-8">
-            <h2 class="tw-text-400 tw-font-bold tw-mb-4">
-                Letter Spacing Tests
-            </h2>
-            <p class="tw-tracking-densest">Tracking Densest (-1.3px)</p>
-            <p class="tw-tracking-denser">Tracking Denser (-1px)</p>
-            <p class="tw-tracking-dense">Tracking Dense (-0.7px)</p>
-            <p class="tw-tracking-normal">Tracking Normal (0px)</p>
-            <p class="tw-tracking-wide">Tracking Wide (0.7px)</p>
-            <p class="tw-tracking-wider">Tracking Wider (1px)</p>
-            <p class="tw-tracking-widest">Tracking Widest (1.3px)</p>
-        </div>
-
-        <!-- Font Weight Tests -->
-        <div class="tw-mb-8">
-            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Font Weight Tests</h2>
-            <p class="tw-font-thin">Font Thin (100)</p>
-            <p class="tw-font-extralight">Font Extralight (200)</p>
-            <p class="tw-font-light">Font Light (300)</p>
-            <p class="tw-font-normal">Font Normal (400)</p>
-            <p class="tw-font-medium">Font Medium (500)</p>
-            <p class="tw-font-semibold">Font Semibold (600)</p>
-            <p class="tw-font-bold">Font Bold (700)</p>
-            <p class="tw-font-extrabold">Font Extrabold (800)</p>
-            <p class="tw-font-black">Font Black (900)</p>
-        </div>
-
+    <body>
         <!-- Component Classes Tests -->
-        <div class="tw-mb-8">
-            <h2 class="tw-text-400 tw-font-bold tw-mb-4">
-                Component Classes Tests
-            </h2>
-            <h1 class="tw-heading-xl">Heading XL</h1>
-            <h2 class="tw-heading-lg">Heading LG</h2>
-            <h3 class="tw-heading-md">Heading MD</h3>
-            <p class="tw-body-lg">Body LG</p>
-        </div>
+        <div class="tw-p-8 tw-bg-gray-100">
+            <!-- Headings Card -->
+            <div
+                class="tw-bg-[#f1f1f1] tw-border tw-border-[#e1e1e1] tw-rounded-lg tw-shadow-md tw-p-6 tw-mb-8"
+            >
+                <h2 class="tw-text-400 tw-font-bold tw-mb-6 tw-text-[#2C5282]">
+                    Heading Styles
+                </h2>
+                <div class="tw-space-y-4">
+                    <p class="tw-heading-xl">Heading XL</p>
+                    <p class="tw-heading-lg">Heading LG</p>
+                    <p class="tw-heading-md">Heading MD</p>
+                    <p class="tw-heading-sm">Heading SM</p>
+                    <p class="tw-heading-xs">Heading XS</p>
+                </div>
+            </div>
 
-        <!-- Combined Tests -->
-        <div class="tw-mb-8">
-            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Combined Tests</h2>
-            <p
-                class="tw-font-main tw-text-900 tw-leading-900 tw-tracking-dense tw-font-bold"
+            <!-- Subheadings Card -->
+            <div
+                class="tw-bg-[#f1f1f1] tw-border tw-border-[#e1e1e1] tw-rounded-lg tw-shadow-md tw-p-6 tw-mb-8"
             >
-                Combined Main Font + Size 900 + Leading 900 + Dense Tracking +
-                Bold
-            </p>
-            <p
-                class="tw-font-inbound tw-text-400 tw-leading-400 tw-tracking-normal tw-font-normal"
+                <h2 class="tw-text-400 tw-font-bold tw-mb-6 tw-text-[#2C5282]">
+                    Subheading Styles
+                </h2>
+                <div class="tw-space-y-4">
+                    <p class="tw-subheading-sm">Subheading SM</p>
+                    <p class="tw-subheading-xs">Subheading XS</p>
+                </div>
+            </div>
+
+            <!-- Body Text Card -->
+            <div
+                class="tw-bg-[#f1f1f1] tw-border tw-border-[#e1e1e1] tw-rounded-lg tw-shadow-md tw-p-6 tw-mb-8"
             >
-                Combined Inbound Font + Size 400 + Leading 400 + Normal Tracking
-                + Normal Weight
-            </p>
-            <p
-                class="tw-font-code tw-text-300 tw-leading-300 tw-tracking-wide tw-font-light"
+                <h2 class="tw-text-400 tw-font-bold tw-mb-6 tw-text-[#2C5282]">
+                    Body Styles
+                </h2>
+                <div class="tw-space-y-4">
+                    <p class="tw-body-lg-regular">Body Large Regular</p>
+                    <p class="tw-body-lg-medium">Body Large Medium</p>
+                    <p class="tw-body-md-regular">Body Medium Regular</p>
+                    <p class="tw-body-md-medium">Body Medium Medium</p>
+                    <p class="tw-body-sm-regular">Body Small Regular</p>
+                    <p class="tw-body-sm-medium">Body Small Medium</p>
+                    <p class="tw-body-xs-regular">Body XSmall Regular</p>
+                    <p class="tw-body-xs-medium">Body XSmall Medium</p>
+                </div>
+            </div>
+
+            <!-- Labels Card -->
+            <div
+                class="tw-bg-[#f1f1f1] tw-border tw-border-[#e1e1e1] tw-rounded-lg tw-shadow-md tw-p-6 tw-mb-8"
             >
-                Combined Code Font + Size 300 + Leading 300 + Wide Tracking +
-                Light Weight
-            </p>
+                <h2 class="tw-text-400 tw-font-bold tw-mb-6 tw-text-[#2C5282]">
+                    Label Styles
+                </h2>
+                <div class="tw-space-y-4">
+                    <p class="tw-label-sm-regular">Label Small Regular</p>
+                    <p class="tw-label-sm-medium">Label Small Medium</p>
+                    <p class="tw-label-xs-regular">Label XSmall Regular</p>
+                    <p class="tw-label-xs-medium">Label XSmall Medium</p>
+                </div>
+            </div>
+
+            <!-- Font Size Scale Card -->
+            <div
+                class="tw-bg-[#f1f1f1] tw-border tw-border-[#e1e1e1] tw-rounded-lg tw-shadow-md tw-p-6 tw-mb-8"
+            >
+                <h2 class="tw-text-400 tw-font-bold tw-mb-6 tw-text-[#2C5282]">
+                    Font Size Scale
+                </h2>
+                <div class="tw-space-y-4">
+                    <p class="tw-font-size-1000">Font Size 1000 (56px)</p>
+                    <p class="tw-font-size-900">Font Size 900 (48px)</p>
+                    <p class="tw-font-size-800">Font Size 800 (40px)</p>
+                    <p class="tw-font-size-700">Font Size 700 (32px)</p>
+                    <p class="tw-font-size-600">Font Size 600 (28px)</p>
+                    <p class="tw-font-size-500">Font Size 500 (24px)</p>
+                    <p class="tw-font-size-400">Font Size 400 (20px)</p>
+                    <p class="tw-font-size-300">Font Size 300 (16px)</p>
+                    <p class="tw-font-size-200">Font Size 200 (14px)</p>
+                    <p class="tw-font-size-100">Font Size 100 (12px)</p>
+                </div>
+            </div>
+
+            <!-- Line Height Scale Card -->
+            <div
+                class="tw-bg-[#f1f1f1] tw-border tw-border-[#e1e1e1] tw-rounded-lg tw-shadow-md tw-p-6 tw-mb-8"
+            >
+                <h2 class="tw-text-400 tw-font-bold tw-mb-6 tw-text-[#2C5282]">
+                    Line Height Scale
+                </h2>
+                <div class="tw-space-y-4">
+                    <p class="tw-line-height-1000">Line Height 1000 (60px)</p>
+                    <p class="tw-line-height-900">Line Height 900 (48px)</p>
+                    <p class="tw-line-height-800">Line Height 800 (40px)</p>
+                    <p class="tw-line-height-700">Line Height 700 (36px)</p>
+                    <p class="tw-line-height-600">Line Height 600 (32px)</p>
+                    <p class="tw-line-height-500">Line Height 500 (24px)</p>
+                    <p class="tw-line-height-400">Line Height 400 (20px)</p>
+                    <p class="tw-line-height-300">Line Height 300 (16px)</p>
+                    <p class="tw-line-height-200">Line Height 200 (14px)</p>
+                    <p class="tw-line-height-100">Line Height 100 (12px)</p>
+                </div>
+            </div>
+
+            <!-- Letter Spacing Scale Card -->
+            <div
+                class="tw-bg-[#f1f1f1] tw-border tw-border-[#e1e1e1] tw-rounded-lg tw-shadow-md tw-p-6 tw-mb-8"
+            >
+                <h2 class="tw-text-400 tw-font-bold tw-mb-6 tw-text-[#2C5282]">
+                    Letter Spacing Scale
+                </h2>
+                <div class="tw-space-y-4">
+                    <p class="tw-letter-spacing-widest">
+                        Letter Spacing Widest (1.3px)
+                    </p>
+                    <p class="tw-letter-spacing-wider">
+                        Letter Spacing Wider (1px)
+                    </p>
+                    <p class="tw-letter-spacing-wide">
+                        Letter Spacing Wide (0.7px)
+                    </p>
+                    <p class="tw-letter-spacing-normal">
+                        Letter Spacing Normal (0px)
+                    </p>
+                    <p class="tw-letter-spacing-dense">
+                        Letter Spacing Dense (-0.7px)
+                    </p>
+                    <p class="tw-letter-spacing-denser">
+                        Letter Spacing Denser (-1px)
+                    </p>
+                    <p class="tw-letter-spacing-densest">
+                        Letter Spacing Densest (-1.3px)
+                    </p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

@@ -7,20 +7,173 @@
         background: red;
     }
 
+    /* Heading Styles */
     .tw-heading-xl {
-        @apply tw-font-main tw-text-900 tw-leading-900 tw-font-bold tw-tracking-dense;
+        @apply tw-font-main tw-font-size-900 tw-line-height-1000 tw-font-bold tw-letter-spacing-denser;
     }
 
     .tw-heading-lg {
-        @apply tw-font-main tw-text-800 tw-leading-800 tw-font-bold tw-tracking-dense;
+        @apply tw-font-main tw-font-size-800 tw-line-height-900 tw-font-medium tw-letter-spacing-dense;
     }
 
     .tw-heading-md {
-        @apply tw-font-main tw-text-700 tw-leading-700 tw-font-bold tw-tracking-dense;
+        @apply tw-font-main tw-font-size-700 tw-line-height-800 tw-font-medium tw-letter-spacing-dense;
     }
 
-    .tw-body-lg {
-        @apply tw-font-main tw-text-400 tw-leading-400 tw-font-normal;
+    .tw-heading-sm {
+        @apply tw-font-main tw-font-size-600 tw-line-height-700 tw-font-medium tw-letter-spacing-dense;
+    }
+
+    .tw-heading-xs {
+        @apply tw-font-main tw-font-size-500 tw-line-height-600 tw-font-medium tw-letter-spacing-dense;
+    }
+
+    /* Subheading Styles */
+    .tw-subheading-sm {
+        @apply tw-font-main tw-font-size-400 tw-line-height-400 tw-font-medium tw-letter-spacing-dense;
+    }
+
+    .tw-subheading-xs {
+        @apply tw-font-main tw-font-size-300 tw-line-height-400 tw-font-medium tw-letter-spacing-normal;
+    }
+
+    /* Body Styles */
+    .tw-body-lg-regular {
+        @apply tw-font-main tw-font-size-400 tw-line-height-600 tw-font-normal;
+    }
+
+    .tw-body-lg-medium {
+        @apply tw-font-main tw-font-size-400 tw-line-height-600 tw-font-medium;
+    }
+
+    .tw-body-md-regular {
+        @apply tw-font-main tw-font-size-300 tw-line-height-500 tw-font-normal;
+    }
+
+    .tw-body-md-medium {
+        @apply tw-font-main tw-font-size-300 tw-line-height-500 tw-font-medium;
+    }
+
+    .tw-body-sm-regular {
+        @apply tw-font-main tw-font-size-200 tw-line-height-400 tw-font-normal;
+    }
+
+    .tw-body-sm-medium {
+        @apply tw-font-main tw-font-size-200 tw-line-height-400 tw-font-medium;
+    }
+
+    .tw-body-xs-regular {
+        @apply tw-font-main tw-font-size-100 tw-line-height-300 tw-font-normal;
+    }
+
+    .tw-body-xs-medium {
+        @apply tw-font-main tw-font-size-100 tw-line-height-300 tw-font-medium;
+    }
+
+    /* Label Styles */
+    .tw-label-sm-regular {
+        @apply tw-font-main tw-font-size-200 tw-line-height-200 tw-font-normal tw-letter-spacing-wide tw-uppercase;
+    }
+
+    .tw-label-sm-medium {
+        @apply tw-font-main tw-font-size-200 tw-line-height-200 tw-font-medium tw-letter-spacing-wide tw-uppercase;
+    }
+
+    .tw-label-xs-regular {
+        @apply tw-font-main tw-font-size-100 tw-line-height-100 tw-font-normal tw-letter-spacing-wide tw-uppercase;
+    }
+
+    .tw-label-xs-medium {
+        @apply tw-font-main tw-font-size-100 tw-line-height-100 tw-font-medium tw-letter-spacing-wide tw-uppercase;
+    }
+}
+
+@layer utilities {
+    /* Font Size Utilities */
+    .tw-font-size-100 {
+        font-size: theme("fontSize.100");
+    }
+    .tw-font-size-200 {
+        font-size: theme("fontSize.200");
+    }
+    .tw-font-size-300 {
+        font-size: theme("fontSize.300");
+    }
+    .tw-font-size-400 {
+        font-size: theme("fontSize.400");
+    }
+    .tw-font-size-500 {
+        font-size: theme("fontSize.500");
+    }
+    .tw-font-size-600 {
+        font-size: theme("fontSize.600");
+    }
+    .tw-font-size-700 {
+        font-size: theme("fontSize.700");
+    }
+    .tw-font-size-800 {
+        font-size: theme("fontSize.800");
+    }
+    .tw-font-size-900 {
+        font-size: theme("fontSize.900");
+    }
+    .tw-font-size-1000 {
+        font-size: theme("fontSize.1000");
+    }
+
+    /* Line Height Utilities */
+    .tw-line-height-100 {
+        line-height: theme("lineHeight.100");
+    }
+    .tw-line-height-200 {
+        line-height: theme("lineHeight.200");
+    }
+    .tw-line-height-300 {
+        line-height: theme("lineHeight.300");
+    }
+    .tw-line-height-400 {
+        line-height: theme("lineHeight.400");
+    }
+    .tw-line-height-500 {
+        line-height: theme("lineHeight.500");
+    }
+    .tw-line-height-600 {
+        line-height: theme("lineHeight.600");
+    }
+    .tw-line-height-700 {
+        line-height: theme("lineHeight.700");
+    }
+    .tw-line-height-800 {
+        line-height: theme("lineHeight.800");
+    }
+    .tw-line-height-900 {
+        line-height: theme("lineHeight.900");
+    }
+    .tw-line-height-1000 {
+        line-height: theme("lineHeight.1000");
+    }
+
+    /* Letter Spacing Utilities */
+    .tw-letter-spacing-densest {
+        letter-spacing: theme("letterSpacing.densest");
+    }
+    .tw-letter-spacing-denser {
+        letter-spacing: theme("letterSpacing.denser");
+    }
+    .tw-letter-spacing-dense {
+        letter-spacing: theme("letterSpacing.dense");
+    }
+    .tw-letter-spacing-normal {
+        letter-spacing: theme("letterSpacing.normal");
+    }
+    .tw-letter-spacing-wide {
+        letter-spacing: theme("letterSpacing.wide");
+    }
+    .tw-letter-spacing-wider {
+        letter-spacing: theme("letterSpacing.wider");
+    }
+    .tw-letter-spacing-widest {
+        letter-spacing: theme("letterSpacing.widest");
     }
 }
 

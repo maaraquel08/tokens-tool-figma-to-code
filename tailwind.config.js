@@ -24,19 +24,19 @@ module.exports = {
         plugin(function ({ addComponents }) {
             addComponents({
                 ".tw-heading-xl": {
-                    "@apply tw-font-main tw-text-900 tw-leading-900 tw-font-bold tw-tracking-dense":
+                    "@apply tw-font-main tw-text-900 tw-line-height-900 tw-font-bold tw-letter-spacing-dense":
                         {},
                 },
                 ".tw-heading-lg": {
-                    "@apply tw-font-main tw-text-800 tw-leading-800 tw-font-bold tw-tracking-dense":
+                    "@apply tw-font-main tw-text-800 tw-line-height-800 tw-font-bold tw-letter-spacing-dense":
                         {},
                 },
                 ".tw-heading-md": {
-                    "@apply tw-font-main tw-text-700 tw-leading-700 tw-font-bold tw-tracking-dense":
+                    "@apply tw-font-main tw-text-700 tw-line-height-700 tw-font-bold tw-letter-spacing-dense":
                         {},
                 },
                 ".tw-body-lg": {
-                    "@apply tw-font-main tw-text-400 tw-leading-400 tw-font-normal":
+                    "@apply tw-font-main tw-text-400 tw-line-height-400 tw-font-normal":
                         {},
                 },
             });
