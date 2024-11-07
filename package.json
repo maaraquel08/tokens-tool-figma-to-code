@@ -1,0 +1,16 @@
+{
+    "name": "tokens-tool-figma-to-code",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "typography": "node src/scripts/typography.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "node-fetch": "^2.7.0"
+    }
+}
