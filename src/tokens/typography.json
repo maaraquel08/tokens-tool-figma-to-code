@@ -1,0 +1,62 @@
+{
+    "font": {
+        "family": {
+            "main": { "value": "Rubik" },
+            "inbound": { "value": "Roboto" },
+            "code": { "value": "Roboto Mono" }
+        },
+        "weight": {
+            "thin": { "value": "100" },
+            "extralight": { "value": "200" },
+            "light": { "value": "300" },
+            "normal": { "value": "400" },
+            "medium": { "value": "500" },
+            "semibold": { "value": "600" },
+            "bold": { "value": "700" },
+            "extrabold": { "value": "800" },
+            "black": { "value": "900" }
+        },
+        "size": {
+            "100": { "value": "12px" },
+            "200": { "value": "14px" },
+            "300": { "value": "16px" },
+            "400": { "value": "20px" },
+            "500": { "value": "24px" },
+            "600": { "value": "28px" },
+            "700": { "value": "32px" },
+            "800": { "value": "40px" },
+            "900": { "value": "48px" },
+            "1000": { "value": "56px" }
+        },
+        "lineHeight": {
+            "100": { "value": "12px" },
+            "200": { "value": "14px" },
+            "300": { "value": "16px" },
+            "400": { "value": "20px" },
+            "500": { "value": "24px" },
+            "600": { "value": "32px" },
+            "700": { "value": "36px" },
+            "800": { "value": "40px" },
+            "900": { "value": "48px" },
+            "1000": { "value": "60px" }
+        },
+        "letterSpacing": {
+            "densest": { "value": "-1.3px" },
+            "denser": { "value": "-1px" },
+            "dense": { "value": "-0.7px" },
+            "normal": { "value": "0px" },
+            "wide": { "value": "0.7px" },
+            "wider": { "value": "1px" },
+            "widest": { "value": "1.3px" }
+        }
+    },
+    "typography": {
+        "heading-xl": {
+            "fontFamily": { "value": "{font.family.main.value}" },
+            "fontWeight": { "value": "{font.weight.bold.value}" },
+            "fontSize": { "value": "{font.size.900.value}" },
+            "lineHeight": { "value": "{font.lineHeight.900.value}" },
+            "letterSpacing": { "value": "{font.letterSpacing.dense.value}" }
+        }
+    }
+}

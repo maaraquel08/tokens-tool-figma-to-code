@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Typography System Test</title>
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- All fonts in one link -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Load your styles after fonts -->
+        <link href="./dist/styles.css" rel="stylesheet" />
+    </head>
+    <body class="tw-p-8">
+        <!-- Font Family Tests -->
+        <div class="tw-mb-8">
+            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Font Family Tests</h2>
+            <p class="tw-font-main">Main Font (Rubik)</p>
+            <p class="tw-font-inbound">Inbound Font (Roboto)</p>
+            <p class="tw-font-code">Code Font (Roboto Mono)</p>
+        </div>
+
+        <!-- Font Size Tests -->
+        <div class="tw-mb-8">
+            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Font Size Tests</h2>
+            <p class="tw-text-100">Text 100 (12px)</p>
+            <p class="tw-text-200">Text 200 (14px)</p>
+            <p class="tw-text-300">Text 300 (16px)</p>
+            <p class="tw-text-400">Text 400 (20px)</p>
+            <p class="tw-text-500">Text 500 (24px)</p>
+            <p class="tw-text-600">Text 600 (28px)</p>
+            <p class="tw-text-700">Text 700 (32px)</p>
+            <p class="tw-text-800">Text 800 (40px)</p>
+            <p class="tw-text-900">Text 900 (48px)</p>
+            <p class="tw-text-1000">Text 1000 (56px)</p>
+        </div>
+
+        <!-- Line Height Tests -->
+        <div class="tw-mb-8">
+            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Line Height Tests</h2>
+            <p class="tw-leading-100">Leading 100 (12px)</p>
+            <p class="tw-leading-200">Leading 200 (14px)</p>
+            <p class="tw-leading-300">Leading 300 (16px)</p>
+            <p class="tw-leading-400">Leading 400 (20px)</p>
+            <p class="tw-leading-500">Leading 500 (24px)</p>
+            <p class="tw-leading-600">Leading 600 (32px)</p>
+            <p class="tw-leading-700">Leading 700 (36px)</p>
+            <p class="tw-leading-800">Leading 800 (40px)</p>
+            <p class="tw-leading-900">Leading 900 (48px)</p>
+            <p class="tw-leading-1000">Leading 1000 (60px)</p>
+        </div>
+
+        <!-- Letter Spacing Tests -->
+        <div class="tw-mb-8">
+            <h2 class="tw-text-400 tw-font-bold tw-mb-4">
+                Letter Spacing Tests
+            </h2>
+            <p class="tw-tracking-densest">Tracking Densest (-1.3px)</p>
+            <p class="tw-tracking-denser">Tracking Denser (-1px)</p>
+            <p class="tw-tracking-dense">Tracking Dense (-0.7px)</p>
+            <p class="tw-tracking-normal">Tracking Normal (0px)</p>
+            <p class="tw-tracking-wide">Tracking Wide (0.7px)</p>
+            <p class="tw-tracking-wider">Tracking Wider (1px)</p>
+            <p class="tw-tracking-widest">Tracking Widest (1.3px)</p>
+        </div>
+
+        <!-- Font Weight Tests -->
+        <div class="tw-mb-8">
+            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Font Weight Tests</h2>
+            <p class="tw-font-thin">Font Thin (100)</p>
+            <p class="tw-font-extralight">Font Extralight (200)</p>
+            <p class="tw-font-light">Font Light (300)</p>
+            <p class="tw-font-normal">Font Normal (400)</p>
+            <p class="tw-font-medium">Font Medium (500)</p>
+            <p class="tw-font-semibold">Font Semibold (600)</p>
+            <p class="tw-font-bold">Font Bold (700)</p>
+            <p class="tw-font-extrabold">Font Extrabold (800)</p>
+            <p class="tw-font-black">Font Black (900)</p>
+        </div>
+
+        <!-- Component Classes Tests -->
+        <div class="tw-mb-8">
+            <h2 class="tw-text-400 tw-font-bold tw-mb-4">
+                Component Classes Tests
+            </h2>
+            <h1 class="tw-heading-xl">Heading XL</h1>
+            <h2 class="tw-heading-lg">Heading LG</h2>
+            <h3 class="tw-heading-md">Heading MD</h3>
+            <p class="tw-body-lg">Body LG</p>
+        </div>
+
+        <!-- Combined Tests -->
+        <div class="tw-mb-8">
+            <h2 class="tw-text-400 tw-font-bold tw-mb-4">Combined Tests</h2>
+            <p
+                class="tw-font-main tw-text-900 tw-leading-900 tw-tracking-dense tw-font-bold"
+            >
+                Combined Main Font + Size 900 + Leading 900 + Dense Tracking +
+                Bold
+            </p>
+            <p
+                class="tw-font-inbound tw-text-400 tw-leading-400 tw-tracking-normal tw-font-normal"
+            >
+                Combined Inbound Font + Size 400 + Leading 400 + Normal Tracking
+                + Normal Weight
+            </p>
+            <p
+                class="tw-font-code tw-text-300 tw-leading-300 tw-tracking-wide tw-font-light"
+            >
+                Combined Code Font + Size 300 + Leading 300 + Wide Tracking +
+                Light Weight
+            </p>
+        </div>
+    </body>
+</html>
