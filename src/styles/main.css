@@ -175,6 +175,741 @@
     .tw-letter-spacing-widest {
         letter-spacing: theme("letterSpacing.widest");
     }
+
+    /* Color Utilities */
+    /* White */
+    .tw-bg-white-50 {
+        background-color: theme("colors.white.50");
+    }
+    .tw-bg-white-100 {
+        background-color: theme("colors.white.100");
+    }
+    .tw-bg-white-200 {
+        background-color: theme("colors.white.200");
+    }
+    .tw-bg-white-300 {
+        background-color: theme("colors.white.300");
+    }
+    .tw-bg-white-400 {
+        background-color: theme("colors.white.400");
+    }
+    .tw-bg-white-500 {
+        background-color: theme("colors.white.500");
+    }
+    .tw-bg-white-600 {
+        background-color: theme("colors.white.600");
+    }
+    .tw-bg-white-700 {
+        background-color: theme("colors.white.700");
+    }
+    .tw-bg-white-800 {
+        background-color: theme("colors.white.800");
+    }
+    .tw-bg-white-900 {
+        background-color: theme("colors.white.900");
+    }
+    .tw-bg-white-950 {
+        background-color: theme("colors.white.950");
+    }
+
+    .tw-text-white-50 {
+        color: theme("colors.white.50");
+    }
+    .tw-text-white-100 {
+        color: theme("colors.white.100");
+    }
+    .tw-text-white-200 {
+        color: theme("colors.white.200");
+    }
+    .tw-text-white-300 {
+        color: theme("colors.white.300");
+    }
+    .tw-text-white-400 {
+        color: theme("colors.white.400");
+    }
+    .tw-text-white-500 {
+        color: theme("colors.white.500");
+    }
+    .tw-text-white-600 {
+        color: theme("colors.white.600");
+    }
+    .tw-text-white-700 {
+        color: theme("colors.white.700");
+    }
+    .tw-text-white-800 {
+        color: theme("colors.white.800");
+    }
+    .tw-text-white-900 {
+        color: theme("colors.white.900");
+    }
+    .tw-text-white-950 {
+        color: theme("colors.white.950");
+    }
+
+    /* Mushroom */
+    .tw-bg-mushroom-50 {
+        background-color: theme("colors.mushroom.50");
+    }
+    .tw-bg-mushroom-100 {
+        background-color: theme("colors.mushroom.100");
+    }
+    .tw-bg-mushroom-200 {
+        background-color: theme("colors.mushroom.200");
+    }
+    .tw-bg-mushroom-300 {
+        background-color: theme("colors.mushroom.300");
+    }
+    .tw-bg-mushroom-400 {
+        background-color: theme("colors.mushroom.400");
+    }
+    .tw-bg-mushroom-500 {
+        background-color: theme("colors.mushroom.500");
+    }
+    .tw-bg-mushroom-600 {
+        background-color: theme("colors.mushroom.600");
+    }
+    .tw-bg-mushroom-700 {
+        background-color: theme("colors.mushroom.700");
+    }
+    .tw-bg-mushroom-800 {
+        background-color: theme("colors.mushroom.800");
+    }
+    .tw-bg-mushroom-900 {
+        background-color: theme("colors.mushroom.900");
+    }
+    .tw-bg-mushroom-950 {
+        background-color: theme("colors.mushroom.950");
+    }
+
+    .tw-text-mushroom-50 {
+        color: theme("colors.mushroom.50");
+    }
+    .tw-text-mushroom-100 {
+        color: theme("colors.mushroom.100");
+    }
+    .tw-text-mushroom-200 {
+        color: theme("colors.mushroom.200");
+    }
+    .tw-text-mushroom-300 {
+        color: theme("colors.mushroom.300");
+    }
+    .tw-text-mushroom-400 {
+        color: theme("colors.mushroom.400");
+    }
+    .tw-text-mushroom-500 {
+        color: theme("colors.mushroom.500");
+    }
+    .tw-text-mushroom-600 {
+        color: theme("colors.mushroom.600");
+    }
+    .tw-text-mushroom-700 {
+        color: theme("colors.mushroom.700");
+    }
+    .tw-text-mushroom-800 {
+        color: theme("colors.mushroom.800");
+    }
+    .tw-text-mushroom-900 {
+        color: theme("colors.mushroom.900");
+    }
+    .tw-text-mushroom-950 {
+        color: theme("colors.mushroom.950");
+    }
+
+    /* Tomato */
+    .tw-bg-tomato-50 {
+        background-color: theme("colors.tomato.50");
+    }
+    .tw-bg-tomato-100 {
+        background-color: theme("colors.tomato.100");
+    }
+    .tw-bg-tomato-200 {
+        background-color: theme("colors.tomato.200");
+    }
+    .tw-bg-tomato-300 {
+        background-color: theme("colors.tomato.300");
+    }
+    .tw-bg-tomato-400 {
+        background-color: theme("colors.tomato.400");
+    }
+    .tw-bg-tomato-500 {
+        background-color: theme("colors.tomato.500");
+    }
+    .tw-bg-tomato-600 {
+        background-color: theme("colors.tomato.600");
+    }
+    .tw-bg-tomato-700 {
+        background-color: theme("colors.tomato.700");
+    }
+    .tw-bg-tomato-800 {
+        background-color: theme("colors.tomato.800");
+    }
+    .tw-bg-tomato-900 {
+        background-color: theme("colors.tomato.900");
+    }
+    .tw-bg-tomato-950 {
+        background-color: theme("colors.tomato.950");
+    }
+
+    .tw-text-tomato-50 {
+        color: theme("colors.tomato.50");
+    }
+    .tw-text-tomato-100 {
+        color: theme("colors.tomato.100");
+    }
+    .tw-text-tomato-200 {
+        color: theme("colors.tomato.200");
+    }
+    .tw-text-tomato-300 {
+        color: theme("colors.tomato.300");
+    }
+    .tw-text-tomato-400 {
+        color: theme("colors.tomato.400");
+    }
+    .tw-text-tomato-500 {
+        color: theme("colors.tomato.500");
+    }
+    .tw-text-tomato-600 {
+        color: theme("colors.tomato.600");
+    }
+    .tw-text-tomato-700 {
+        color: theme("colors.tomato.700");
+    }
+    .tw-text-tomato-800 {
+        color: theme("colors.tomato.800");
+    }
+    .tw-text-tomato-900 {
+        color: theme("colors.tomato.900");
+    }
+    .tw-text-tomato-950 {
+        color: theme("colors.tomato.950");
+    }
+
+    /* Carrot */
+    .tw-bg-carrot-50 {
+        background-color: theme("colors.carrot.50");
+    }
+    .tw-bg-carrot-100 {
+        background-color: theme("colors.carrot.100");
+    }
+    .tw-bg-carrot-200 {
+        background-color: theme("colors.carrot.200");
+    }
+    .tw-bg-carrot-300 {
+        background-color: theme("colors.carrot.300");
+    }
+    .tw-bg-carrot-400 {
+        background-color: theme("colors.carrot.400");
+    }
+    .tw-bg-carrot-500 {
+        background-color: theme("colors.carrot.500");
+    }
+    .tw-bg-carrot-600 {
+        background-color: theme("colors.carrot.600");
+    }
+    .tw-bg-carrot-700 {
+        background-color: theme("colors.carrot.700");
+    }
+    .tw-bg-carrot-800 {
+        background-color: theme("colors.carrot.800");
+    }
+    .tw-bg-carrot-900 {
+        background-color: theme("colors.carrot.900");
+    }
+    .tw-bg-carrot-950 {
+        background-color: theme("colors.carrot.950");
+    }
+
+    .tw-text-carrot-50 {
+        color: theme("colors.carrot.50");
+    }
+    .tw-text-carrot-100 {
+        color: theme("colors.carrot.100");
+    }
+    .tw-text-carrot-200 {
+        color: theme("colors.carrot.200");
+    }
+    .tw-text-carrot-300 {
+        color: theme("colors.carrot.300");
+    }
+    .tw-text-carrot-400 {
+        color: theme("colors.carrot.400");
+    }
+    .tw-text-carrot-500 {
+        color: theme("colors.carrot.500");
+    }
+    .tw-text-carrot-600 {
+        color: theme("colors.carrot.600");
+    }
+    .tw-text-carrot-700 {
+        color: theme("colors.carrot.700");
+    }
+    .tw-text-carrot-800 {
+        color: theme("colors.carrot.800");
+    }
+    .tw-text-carrot-900 {
+        color: theme("colors.carrot.900");
+    }
+    .tw-text-carrot-950 {
+        color: theme("colors.carrot.950");
+    }
+
+    /* Mango */
+    .tw-bg-mango-50 {
+        background-color: theme("colors.mango.50");
+    }
+    .tw-bg-mango-100 {
+        background-color: theme("colors.mango.100");
+    }
+    .tw-bg-mango-200 {
+        background-color: theme("colors.mango.200");
+    }
+    .tw-bg-mango-300 {
+        background-color: theme("colors.mango.300");
+    }
+    .tw-bg-mango-400 {
+        background-color: theme("colors.mango.400");
+    }
+    .tw-bg-mango-500 {
+        background-color: theme("colors.mango.500");
+    }
+    .tw-bg-mango-600 {
+        background-color: theme("colors.mango.600");
+    }
+    .tw-bg-mango-700 {
+        background-color: theme("colors.mango.700");
+    }
+    .tw-bg-mango-800 {
+        background-color: theme("colors.mango.800");
+    }
+    .tw-bg-mango-900 {
+        background-color: theme("colors.mango.900");
+    }
+    .tw-bg-mango-950 {
+        background-color: theme("colors.mango.950");
+    }
+
+    .tw-text-mango-50 {
+        color: theme("colors.mango.50");
+    }
+    .tw-text-mango-100 {
+        color: theme("colors.mango.100");
+    }
+    .tw-text-mango-200 {
+        color: theme("colors.mango.200");
+    }
+    .tw-text-mango-300 {
+        color: theme("colors.mango.300");
+    }
+    .tw-text-mango-400 {
+        color: theme("colors.mango.400");
+    }
+    .tw-text-mango-500 {
+        color: theme("colors.mango.500");
+    }
+    .tw-text-mango-600 {
+        color: theme("colors.mango.600");
+    }
+    .tw-text-mango-700 {
+        color: theme("colors.mango.700");
+    }
+    .tw-text-mango-800 {
+        color: theme("colors.mango.800");
+    }
+    .tw-text-mango-900 {
+        color: theme("colors.mango.900");
+    }
+    .tw-text-mango-950 {
+        color: theme("colors.mango.950");
+    }
+
+    /* Kangkong */
+    .tw-bg-kangkong-50 {
+        background-color: theme("colors.kangkong.50");
+    }
+    .tw-bg-kangkong-100 {
+        background-color: theme("colors.kangkong.100");
+    }
+    .tw-bg-kangkong-200 {
+        background-color: theme("colors.kangkong.200");
+    }
+    .tw-bg-kangkong-300 {
+        background-color: theme("colors.kangkong.300");
+    }
+    .tw-bg-kangkong-400 {
+        background-color: theme("colors.kangkong.400");
+    }
+    .tw-bg-kangkong-500 {
+        background-color: theme("colors.kangkong.500");
+    }
+    .tw-bg-kangkong-600 {
+        background-color: theme("colors.kangkong.600");
+    }
+    .tw-bg-kangkong-700 {
+        background-color: theme("colors.kangkong.700");
+    }
+    .tw-bg-kangkong-800 {
+        background-color: theme("colors.kangkong.800");
+    }
+    .tw-bg-kangkong-900 {
+        background-color: theme("colors.kangkong.900");
+    }
+    .tw-bg-kangkong-950 {
+        background-color: theme("colors.kangkong.950");
+    }
+
+    .tw-text-kangkong-50 {
+        color: theme("colors.kangkong.50");
+    }
+    .tw-text-kangkong-100 {
+        color: theme("colors.kangkong.100");
+    }
+    .tw-text-kangkong-200 {
+        color: theme("colors.kangkong.200");
+    }
+    .tw-text-kangkong-300 {
+        color: theme("colors.kangkong.300");
+    }
+    .tw-text-kangkong-400 {
+        color: theme("colors.kangkong.400");
+    }
+    .tw-text-kangkong-500 {
+        color: theme("colors.kangkong.500");
+    }
+    .tw-text-kangkong-600 {
+        color: theme("colors.kangkong.600");
+    }
+    .tw-text-kangkong-700 {
+        color: theme("colors.kangkong.700");
+    }
+    .tw-text-kangkong-800 {
+        color: theme("colors.kangkong.800");
+    }
+    .tw-text-kangkong-900 {
+        color: theme("colors.kangkong.900");
+    }
+    .tw-text-kangkong-950 {
+        color: theme("colors.kangkong.950");
+    }
+
+    /* Wintermelon */
+    .tw-bg-wintermelon-50 {
+        background-color: theme("colors.wintermelon.50");
+    }
+    .tw-bg-wintermelon-100 {
+        background-color: theme("colors.wintermelon.100");
+    }
+    .tw-bg-wintermelon-200 {
+        background-color: theme("colors.wintermelon.200");
+    }
+    .tw-bg-wintermelon-300 {
+        background-color: theme("colors.wintermelon.300");
+    }
+    .tw-bg-wintermelon-400 {
+        background-color: theme("colors.wintermelon.400");
+    }
+    .tw-bg-wintermelon-500 {
+        background-color: theme("colors.wintermelon.500");
+    }
+    .tw-bg-wintermelon-600 {
+        background-color: theme("colors.wintermelon.600");
+    }
+    .tw-bg-wintermelon-700 {
+        background-color: theme("colors.wintermelon.700");
+    }
+    .tw-bg-wintermelon-800 {
+        background-color: theme("colors.wintermelon.800");
+    }
+    .tw-bg-wintermelon-900 {
+        background-color: theme("colors.wintermelon.900");
+    }
+    .tw-bg-wintermelon-950 {
+        background-color: theme("colors.wintermelon.950");
+    }
+
+    .tw-text-wintermelon-50 {
+        color: theme("colors.wintermelon.50");
+    }
+    .tw-text-wintermelon-100 {
+        color: theme("colors.wintermelon.100");
+    }
+    .tw-text-wintermelon-200 {
+        color: theme("colors.wintermelon.200");
+    }
+    .tw-text-wintermelon-300 {
+        color: theme("colors.wintermelon.300");
+    }
+    .tw-text-wintermelon-400 {
+        color: theme("colors.wintermelon.400");
+    }
+    .tw-text-wintermelon-500 {
+        color: theme("colors.wintermelon.500");
+    }
+    .tw-text-wintermelon-600 {
+        color: theme("colors.wintermelon.600");
+    }
+    .tw-text-wintermelon-700 {
+        color: theme("colors.wintermelon.700");
+    }
+    .tw-text-wintermelon-800 {
+        color: theme("colors.wintermelon.800");
+    }
+    .tw-text-wintermelon-900 {
+        color: theme("colors.wintermelon.900");
+    }
+    .tw-text-wintermelon-950 {
+        color: theme("colors.wintermelon.950");
+    }
+
+    /* Blueberry */
+    .tw-bg-blueberry-50 {
+        background-color: theme("colors.blueberry.50");
+    }
+    .tw-bg-blueberry-100 {
+        background-color: theme("colors.blueberry.100");
+    }
+    .tw-bg-blueberry-200 {
+        background-color: theme("colors.blueberry.200");
+    }
+    .tw-bg-blueberry-300 {
+        background-color: theme("colors.blueberry.300");
+    }
+    .tw-bg-blueberry-400 {
+        background-color: theme("colors.blueberry.400");
+    }
+    .tw-bg-blueberry-500 {
+        background-color: theme("colors.blueberry.500");
+    }
+    .tw-bg-blueberry-600 {
+        background-color: theme("colors.blueberry.600");
+    }
+    .tw-bg-blueberry-700 {
+        background-color: theme("colors.blueberry.700");
+    }
+    .tw-bg-blueberry-800 {
+        background-color: theme("colors.blueberry.800");
+    }
+    .tw-bg-blueberry-900 {
+        background-color: theme("colors.blueberry.900");
+    }
+    .tw-bg-blueberry-950 {
+        background-color: theme("colors.blueberry.950");
+    }
+
+    .tw-text-blueberry-50 {
+        color: theme("colors.blueberry.50");
+    }
+    .tw-text-blueberry-100 {
+        color: theme("colors.blueberry.100");
+    }
+    .tw-text-blueberry-200 {
+        color: theme("colors.blueberry.200");
+    }
+    .tw-text-blueberry-300 {
+        color: theme("colors.blueberry.300");
+    }
+    .tw-text-blueberry-400 {
+        color: theme("colors.blueberry.400");
+    }
+    .tw-text-blueberry-500 {
+        color: theme("colors.blueberry.500");
+    }
+    .tw-text-blueberry-600 {
+        color: theme("colors.blueberry.600");
+    }
+    .tw-text-blueberry-700 {
+        color: theme("colors.blueberry.700");
+    }
+    .tw-text-blueberry-800 {
+        color: theme("colors.blueberry.800");
+    }
+    .tw-text-blueberry-900 {
+        color: theme("colors.blueberry.900");
+    }
+    .tw-text-blueberry-950 {
+        color: theme("colors.blueberry.950");
+    }
+
+    /* Ubas */
+    .tw-bg-ubas-50 {
+        background-color: theme("colors.ubas.50");
+    }
+    .tw-bg-ubas-100 {
+        background-color: theme("colors.ubas.100");
+    }
+    .tw-bg-ubas-200 {
+        background-color: theme("colors.ubas.200");
+    }
+    .tw-bg-ubas-300 {
+        background-color: theme("colors.ubas.300");
+    }
+    .tw-bg-ubas-400 {
+        background-color: theme("colors.ubas.400");
+    }
+    .tw-bg-ubas-500 {
+        background-color: theme("colors.ubas.500");
+    }
+    .tw-bg-ubas-600 {
+        background-color: theme("colors.ubas.600");
+    }
+    .tw-bg-ubas-700 {
+        background-color: theme("colors.ubas.700");
+    }
+    .tw-bg-ubas-800 {
+        background-color: theme("colors.ubas.800");
+    }
+    .tw-bg-ubas-900 {
+        background-color: theme("colors.ubas.900");
+    }
+    .tw-bg-ubas-950 {
+        background-color: theme("colors.ubas.950");
+    }
+
+    .tw-text-ubas-50 {
+        color: theme("colors.ubas.50");
+    }
+    .tw-text-ubas-100 {
+        color: theme("colors.ubas.100");
+    }
+    .tw-text-ubas-200 {
+        color: theme("colors.ubas.200");
+    }
+    .tw-text-ubas-300 {
+        color: theme("colors.ubas.300");
+    }
+    .tw-text-ubas-400 {
+        color: theme("colors.ubas.400");
+    }
+    .tw-text-ubas-500 {
+        color: theme("colors.ubas.500");
+    }
+    .tw-text-ubas-600 {
+        color: theme("colors.ubas.600");
+    }
+    .tw-text-ubas-700 {
+        color: theme("colors.ubas.700");
+    }
+    .tw-text-ubas-800 {
+        color: theme("colors.ubas.800");
+    }
+    .tw-text-ubas-900 {
+        color: theme("colors.ubas.900");
+    }
+    .tw-text-ubas-950 {
+        color: theme("colors.ubas.950");
+    }
+
+    /* Semantic Text Colors */
+
+    /* Default Text Colors */
+    .tw-text-color-strong {
+        color: theme("colors.text.strong");
+    }
+    .tw-text-color-supporting {
+        color: theme("colors.text.supporting");
+    }
+    .tw-text-color-base {
+        color: theme("colors.text.base");
+    }
+    .tw-text-color-weak {
+        color: theme("colors.text.weak");
+    }
+    .tw-text-color-disabled {
+        color: theme("colors.text.disabled");
+    }
+    .tw-text-color-on-fill-disabled {
+        color: theme("colors.text.on-fill-disabled");
+    }
+
+    /* Inverted Text Colors */
+    .tw-text-color-inverted-strong {
+        color: theme("colors.text.inverted.strong");
+    }
+    .tw-text-color-inverted-base {
+        color: theme("colors.text.inverted.base");
+    }
+    .tw-text-color-inverted-weak {
+        color: theme("colors.text.inverted.weak");
+    }
+    .tw-text-color-inverted-disabled {
+        color: theme("colors.text.inverted.disabled");
+    }
+
+    /* Brand Colors */
+    .tw-text-color-brand-base {
+        color: theme("colors.brand.base");
+    }
+    .tw-text-color-brand-hover {
+        color: theme("colors.brand.hover");
+    }
+    .tw-text-color-brand-pressed {
+        color: theme("colors.brand.pressed");
+    }
+
+    /* Success Colors */
+    .tw-text-color-success-base {
+        color: theme("colors.success.base");
+    }
+    .tw-text-color-success-hover {
+        color: theme("colors.success.hover");
+    }
+    .tw-text-color-success-pressed {
+        color: theme("colors.success.pressed");
+    }
+
+    /* Information Colors */
+    .tw-text-color-information-base {
+        color: theme("colors.information.base");
+    }
+    .tw-text-color-information-hover {
+        color: theme("colors.information.hover");
+    }
+    .tw-text-color-information-pressed {
+        color: theme("colors.information.pressed");
+    }
+
+    /* Danger Colors */
+    .tw-text-color-danger-base {
+        color: theme("colors.danger.base");
+    }
+    .tw-text-color-danger-hover {
+        color: theme("colors.danger.hover");
+    }
+    .tw-text-color-danger-pressed {
+        color: theme("colors.danger.pressed");
+    }
+
+    /* Pending Colors */
+    .tw-text-color-pending-base {
+        color: theme("colors.pending.base");
+    }
+    .tw-text-color-pending-hover {
+        color: theme("colors.pending.hover");
+    }
+    .tw-text-color-pending-pressed {
+        color: theme("colors.pending.pressed");
+    }
+
+    /* Caution Colors */
+    .tw-text-color-caution-base {
+        color: theme("colors.caution.base");
+    }
+    .tw-text-color-caution-hover {
+        color: theme("colors.caution.hover");
+    }
+    .tw-text-color-caution-pressed {
+        color: theme("colors.caution.pressed");
+    }
+
+    /* Accent Colors */
+    .tw-text-color-accent-base {
+        color: theme("colors.accent.base");
+    }
+    .tw-text-color-accent-hover {
+        color: theme("colors.accent.hover");
+    }
+    .tw-text-color-accent-pressed {
+        color: theme("colors.accent.pressed");
+    }
 }
 
 @tailwind utilities;

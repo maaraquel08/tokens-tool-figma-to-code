@@ -44,7 +44,15 @@ StyleDictionary.registerFormat({
     formatter: function ({ dictionary }) {
         const { tokens } = dictionary;
 
-        // Format all typography-related tokens
+        // Format colors
+        const colors = {};
+        Object.entries(tokens.color).forEach(([colorName, shades]) => {
+            colors[colorName] = {};
+            Object.entries(shades).forEach(([shade, value]) => {
+                colors[colorName][shade] = value.value;
+            });
+        });
+
         const theme = {
             fontFamily: {
                 main: ["Rubik", "sans-serif"],
@@ -56,6 +64,7 @@ StyleDictionary.registerFormat({
             letterSpacing: formatTokens(tokens.font.letterSpacing),
             fontWeight: formatTokens(tokens.font.weight),
             typography: formatTypographyPresets(tokens.typography),
+            colors: colors,
         };
 
         return `module.exports = {
@@ -66,7 +75,8 @@ StyleDictionary.registerFormat({
             lineHeight: ${JSON.stringify(theme.lineHeight, null, 4)},
             letterSpacing: ${JSON.stringify(theme.letterSpacing, null, 4)},
             fontWeight: ${JSON.stringify(theme.fontWeight, null, 4)},
-            typography: ${JSON.stringify(theme.typography, null, 4)}
+            typography: ${JSON.stringify(theme.typography, null, 4)},
+            colors: ${JSON.stringify(theme.colors, null, 4)}
         }
     }
 };`;
