@@ -835,80 +835,313 @@
     }
 
     /* Brand Colors */
-    .tw-text-color-brand-base {
-        color: theme("colors.brand.base");
+    .tw-text-color-brand {
+        color: theme("colors.text.brand.base");
     }
     .tw-text-color-brand-hover {
-        color: theme("colors.brand.hover");
+        color: theme("colors.text.brand.hover");
     }
     .tw-text-color-brand-pressed {
-        color: theme("colors.brand.pressed");
+        color: theme("colors.text.brand.pressed");
     }
 
     /* Success Colors */
-    .tw-text-color-success-base {
-        color: theme("colors.success.base");
+    .tw-text-color-success {
+        color: theme("colors.text.success.base");
     }
     .tw-text-color-success-hover {
-        color: theme("colors.success.hover");
+        color: theme("colors.text.success.hover");
     }
     .tw-text-color-success-pressed {
-        color: theme("colors.success.pressed");
+        color: theme("colors.text.success.pressed");
     }
 
     /* Information Colors */
-    .tw-text-color-information-base {
-        color: theme("colors.information.base");
+    .tw-text-color-information {
+        color: theme("colors.text.information.base");
     }
     .tw-text-color-information-hover {
-        color: theme("colors.information.hover");
+        color: theme("colors.text.information.hover");
     }
     .tw-text-color-information-pressed {
-        color: theme("colors.information.pressed");
+        color: theme("colors.text.information.pressed");
     }
 
     /* Danger Colors */
-    .tw-text-color-danger-base {
-        color: theme("colors.danger.base");
+    .tw-text-color-danger {
+        color: theme("colors.text.danger.base");
     }
     .tw-text-color-danger-hover {
-        color: theme("colors.danger.hover");
+        color: theme("colors.text.danger.hover");
     }
     .tw-text-color-danger-pressed {
-        color: theme("colors.danger.pressed");
+        color: theme("colors.text.danger.pressed");
     }
 
     /* Pending Colors */
-    .tw-text-color-pending-base {
-        color: theme("colors.pending.base");
+    .tw-text-color-pending {
+        color: theme("colors.text.pending.base");
     }
     .tw-text-color-pending-hover {
-        color: theme("colors.pending.hover");
+        color: theme("colors.text.pending.hover");
     }
     .tw-text-color-pending-pressed {
-        color: theme("colors.pending.pressed");
+        color: theme("colors.text.pending.pressed");
     }
 
     /* Caution Colors */
-    .tw-text-color-caution-base {
-        color: theme("colors.caution.base");
+    .tw-text-color-caution {
+        color: theme("colors.text.caution.base");
     }
     .tw-text-color-caution-hover {
-        color: theme("colors.caution.hover");
+        color: theme("colors.text.caution.hover");
     }
     .tw-text-color-caution-pressed {
-        color: theme("colors.caution.pressed");
+        color: theme("colors.text.caution.pressed");
     }
 
     /* Accent Colors */
-    .tw-text-color-accent-base {
-        color: theme("colors.accent.base");
+    .tw-text-color-accent {
+        color: theme("colors.text.accent.base");
     }
     .tw-text-color-accent-hover {
-        color: theme("colors.accent.hover");
+        color: theme("colors.text.accent.hover");
     }
     .tw-text-color-accent-pressed {
-        color: theme("colors.accent.pressed");
+        color: theme("colors.text.accent.pressed");
+    }
+
+    /* Base Background Colors */
+    .tw-background-color {
+        background-color: theme("colors.background.base");
+    }
+    .tw-background-color-surface {
+        background-color: theme("colors.background.surface");
+    }
+    .tw-background-color-inverted {
+        background-color: theme("colors.background.inverted");
+    }
+    .tw-background-color-inverted-hover {
+        background-color: theme("colors.background.inverted-hover");
+    }
+    .tw-background-color-inverted-pressed {
+        background-color: theme("colors.background.inverted-pressed");
+    }
+    .tw-background-color-hover {
+        background-color: theme("colors.background.hover");
+    }
+    .tw-background-color-pressed {
+        background-color: theme("colors.background.pressed");
+    }
+    .tw-background-color-disabled {
+        background-color: theme("colors.background.disabled");
+    }
+    .tw-background-color-single-active {
+        background-color: theme("colors.background.single-active");
+    }
+    .tw-background-color-multiple-active {
+        background-color: theme("colors.background.multiple-active");
+    }
+
+    /* Brand Background Colors */
+    .tw-background-color-brand {
+        background-color: theme("colors.background.brand.base");
+    }
+    .tw-background-color-brand-hover {
+        background-color: theme("colors.background.brand.hover");
+    }
+    .tw-background-color-brand-pressed {
+        background-color: theme("colors.background.brand.pressed");
+    }
+    .tw-background-color-brand-weak {
+        background-color: theme("colors.background.brand.weak");
+    }
+
+    /* Success Background Colors */
+    .tw-background-color-success {
+        background-color: theme("colors.background.success.base");
+    }
+    .tw-background-color-success-hover {
+        background-color: theme("colors.background.success.hover");
+    }
+    .tw-background-color-success-pressed {
+        background-color: theme("colors.background.success.pressed");
+    }
+    .tw-background-color-success-weak {
+        background-color: theme("colors.background.success.weak");
+    }
+
+    /* Information Background Colors */
+    .tw-background-color-information {
+        background-color: theme("colors.background.information.base");
+    }
+    .tw-background-color-information-hover {
+        background-color: theme("colors.background.information.hover");
+    }
+    .tw-background-color-information-pressed {
+        background-color: theme("colors.background.information.pressed");
+    }
+    .tw-background-color-information-weak {
+        background-color: theme("colors.background.information.weak");
+    }
+
+    /* Danger Background Colors */
+    .tw-background-color-danger {
+        background-color: theme("colors.background.danger.base");
+    }
+    .tw-background-color-danger-hover {
+        background-color: theme("colors.background.danger.hover");
+    }
+    .tw-background-color-danger-pressed {
+        background-color: theme("colors.background.danger.pressed");
+    }
+    .tw-background-color-danger-weak {
+        background-color: theme("colors.background.danger.weak");
+    }
+
+    /* Pending Background Colors */
+    .tw-background-color-pending {
+        background-color: theme("colors.background.pending.base");
+    }
+    .tw-background-color-pending-hover {
+        background-color: theme("colors.background.pending.hover");
+    }
+    .tw-background-color-pending-pressed {
+        background-color: theme("colors.background.pending.pressed");
+    }
+    .tw-background-color-pending-weak {
+        background-color: theme("colors.background.pending.weak");
+    }
+
+    /* Caution Background Colors */
+    .tw-background-color-caution {
+        background-color: theme("colors.background.caution.base");
+    }
+    .tw-background-color-caution-hover {
+        background-color: theme("colors.background.caution.hover");
+    }
+    .tw-background-color-caution-pressed {
+        background-color: theme("colors.background.caution.pressed");
+    }
+    .tw-background-color-caution-weak {
+        background-color: theme("colors.background.caution.weak");
+    }
+
+    /* Accent Background Colors */
+    .tw-background-color-accent {
+        background-color: theme("colors.background.accent.base");
+    }
+    .tw-background-color-accent-hover {
+        background-color: theme("colors.background.accent.hover");
+    }
+    .tw-background-color-accent-pressed {
+        background-color: theme("colors.background.accent.pressed");
+    }
+    .tw-background-color-accent-weak {
+        background-color: theme("colors.background.accent.weak");
+    }
+
+    /* Border Colors */
+    .tw-border-color-strong {
+        border-color: theme("colors.border.strong");
+    }
+    .tw-border-color-supporting {
+        border-color: theme("colors.border.supporting");
+    }
+    .tw-border-color-base {
+        border-color: theme("colors.border.base");
+    }
+    .tw-border-color-hover {
+        border-color: theme("colors.border.hover");
+    }
+    .tw-border-color-pressed {
+        border-color: theme("colors.border.pressed");
+    }
+    .tw-border-color-weak {
+        border-color: theme("colors.border.weak");
+    }
+    .tw-border-color-disabled {
+        border-color: theme("colors.border.disabled");
+    }
+    .tw-border-color-on-fill-disabled {
+        border-color: theme("colors.border.on-fill-disabled");
+    }
+
+    /* Brand Border Colors */
+    .tw-border-color-brand {
+        border-color: theme("colors.border.brand.base");
+    }
+    .tw-border-color-brand-hover {
+        border-color: theme("colors.border.brand.hover");
+    }
+    .tw-border-color-brand-pressed {
+        border-color: theme("colors.border.brand.pressed");
+    }
+
+    /* Success Border Colors */
+    .tw-border-color-success {
+        border-color: theme("colors.border.success.base");
+    }
+    .tw-border-color-success-hover {
+        border-color: theme("colors.border.success.hover");
+    }
+    .tw-border-color-success-pressed {
+        border-color: theme("colors.border.success.pressed");
+    }
+
+    /* Information Border Colors */
+    .tw-border-color-information {
+        border-color: theme("colors.border.information.base");
+    }
+    .tw-border-color-information-hover {
+        border-color: theme("colors.border.information.hover");
+    }
+    .tw-border-color-information-pressed {
+        border-color: theme("colors.border.information.pressed");
+    }
+
+    /* Danger Border Colors */
+    .tw-border-color-danger {
+        border-color: theme("colors.border.danger.base");
+    }
+    .tw-border-color-danger-hover {
+        border-color: theme("colors.border.danger.hover");
+    }
+    .tw-border-color-danger-pressed {
+        border-color: theme("colors.border.danger.pressed");
+    }
+
+    /* Pending Border Colors */
+    .tw-border-color-pending {
+        border-color: theme("colors.border.pending.base");
+    }
+    .tw-border-color-pending-hover {
+        border-color: theme("colors.border.pending.hover");
+    }
+    .tw-border-color-pending-pressed {
+        border-color: theme("colors.border.pending.pressed");
+    }
+
+    /* Caution Border Colors */
+    .tw-border-color-caution {
+        border-color: theme("colors.border.caution.base");
+    }
+    .tw-border-color-caution-hover {
+        border-color: theme("colors.border.caution.hover");
+    }
+    .tw-border-color-caution-pressed {
+        border-color: theme("colors.border.caution.pressed");
+    }
+
+    /* Accent Border Colors */
+    .tw-border-color-accent {
+        border-color: theme("colors.border.accent.base");
+    }
+    .tw-border-color-accent-hover {
+        border-color: theme("colors.border.accent.hover");
+    }
+    .tw-border-color-accent-pressed {
+        border-color: theme("colors.border.accent.pressed");
     }
 }
 

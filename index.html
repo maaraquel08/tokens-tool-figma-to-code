@@ -16,217 +16,964 @@
         <link href="./dist/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <style>
+            .color-section {
+                margin: 2rem 0;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                background-color: #f9fafb;
+            }
+            .color-row {
+                display: flex;
+                gap: 1rem;
+                margin: 0.5rem 0;
+            }
+            .color-sample {
+                padding: 1rem 2rem;
+                border-radius: 0.25rem;
+                min-width: 200px;
+            }
+        </style>
+    </head>
+    <body class="tw-p-8">
+        <h1 class="tw-text-2xl tw-font-bold tw-mb-6">Semantic Colors Showcase</h1>
+    
+        <!-- Text Colors Section -->
+        <section>
+            <h2 class="tw-text-xl tw-font-bold tw-mb-4">Text Colors</h2>
+            
+            <!-- Default Text Colors -->
+            <div class="color-section">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4">Default Text Colors</h3>
+                <div class="color-row">
+                    <span class="tw-text-color-strong">Strong Text</span>
+                    <span class="tw-text-color-supporting">Supporting Text</span>
+                    <span class="tw-text-color-base">Base Text</span>
+                    <span class="tw-text-color-weak">Weak Text</span>
+                    <span class="tw-text-color-disabled">Disabled Text</span>
+                    <span class="tw-text-color-on-fill-disabled">On Fill Disabled Text</span>
+                </div>
+            </div>
+    
+            <!-- Inverted Text Colors -->
+            <div class="color-section tw-bg-gray-900">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-white">Inverted Text Colors</h3>
+                <div class="color-row">
+                    <span class="tw-text-color-inverted-strong">Inverted Strong</span>
+                    <span class="tw-text-color-inverted-base">Inverted Base</span>
+                    <span class="tw-text-color-inverted-weak">Inverted Weak</span>
+                    <span class="tw-text-color-inverted-disabled">Inverted Disabled</span>
+                </div>
+            </div>
+
+            <!-- Status Text Colors -->
+            <div class="color-section">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4">Status Text Colors</h3>
+                
+                <!-- Brand -->
+                <div class="color-row tw-mb-4">
+                    <span class="color-sample tw-text-color-brand">Brand</span>
+                    <span class="color-sample tw-text-color-brand-hover">Brand Hover</span>
+                    <span class="color-sample tw-text-color-brand-pressed">Brand Pressed</span>
+                </div>
+
+                <!-- Success -->
+                <div class="color-row tw-mb-4">
+                    <span class="color-sample tw-text-color-success">Success</span>
+                    <span class="color-sample tw-text-color-success-hover">Success Hover</span>
+                    <span class="color-sample tw-text-color-success-pressed">Success Pressed</span>
+                </div>
+
+                <!-- Information -->
+                <div class="color-row tw-mb-4">
+                    <span class="color-sample tw-text-color-information">Information</span>
+                    <span class="color-sample tw-text-color-information-hover">Information Hover</span>
+                    <span class="color-sample tw-text-color-information-pressed">Information Pressed</span>
+                </div>
+
+                <!-- Danger -->
+                <div class="color-row tw-mb-4">
+                    <span class="color-sample tw-text-color-danger">Danger</span>
+                    <span class="color-sample tw-text-color-danger-hover">Danger Hover</span>
+                    <span class="color-sample tw-text-color-danger-pressed">Danger Pressed</span>
+                </div>
+
+                <!-- Pending -->
+                <div class="color-row tw-mb-4">
+                    <span class="color-sample tw-text-color-pending">Pending</span>
+                    <span class="color-sample tw-text-color-pending-hover">Pending Hover</span>
+                    <span class="color-sample tw-text-color-pending-pressed">Pending Pressed</span>
+                </div>
+
+                <!-- Caution -->
+                <div class="color-row tw-mb-4">
+                    <span class="color-sample tw-text-color-caution">Caution</span>
+                    <span class="color-sample tw-text-color-caution-hover">Caution Hover</span>
+                    <span class="color-sample tw-text-color-caution-pressed">Caution Pressed</span>
+                </div>
+
+                <!-- Accent -->
+                <div class="color-row">
+                    <span class="color-sample tw-text-color-accent">Accent</span>
+                    <span class="color-sample tw-text-color-accent-hover">Accent Hover</span>
+                    <span class="color-sample tw-text-color-accent-pressed">Accent Pressed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Background Colors Section -->
+        <section class="tw-mt-12">
+            <h2 class="tw-text-xl tw-font-bold tw-mb-4">Background Colors</h2>
+
+            <!-- Base Background Colors -->
+            <div class="color-section">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4">Base Background Colors</h3>
+                <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                    <div class="tw-p-4 tw-rounded tw-background-color">Base</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-surface">Surface</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-hover">Hover</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-pressed">Pressed</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-disabled">Disabled</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-single-active">Single Active</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-multiple-active">Multiple Active</div>
+                </div>
+            </div>
+
+            <!-- Inverted Background Colors -->
+            <div class="color-section tw-mt-6">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4">Inverted Background Colors</h3>
+                <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                    <div class="tw-p-4 tw-rounded tw-background-color-inverted tw-text-white">Inverted</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-inverted-hover tw-text-white">Inverted Hover</div>
+                    <div class="tw-p-4 tw-rounded tw-background-color-inverted-pressed tw-text-white">Inverted Pressed</div>
+                </div>
+            </div>
+
+            <!-- Status Background Colors -->
+            <div class="color-section tw-mt-6">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4">Status Background Colors</h3>
+                
+                <!-- Brand -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Brand</h4>
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-background-color-brand tw-text-white">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-brand-hover tw-text-white">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-brand-pressed tw-text-white">Pressed</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-brand-weak">Weak</div>
+                    </div>
+                </div>
+
+                <!-- Success -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Success</h4>
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-background-color-success tw-text-white">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-success-hover tw-text-white">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-success-pressed tw-text-white">Pressed</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-success-weak">Weak</div>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Information</h4>
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-background-color-information tw-text-white">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-information-hover tw-text-white">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-information-pressed tw-text-white">Pressed</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-information-weak">Weak</div>
+                    </div>
+                </div>
+
+                <!-- Danger -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Danger</h4>
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-background-color-danger tw-text-white">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-danger-hover tw-text-white">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-danger-pressed tw-text-white">Pressed</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-danger-weak">Weak</div>
+                    </div>
+                </div>
+
+                <!-- Pending -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Pending</h4>
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-background-color-pending tw-text-white">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-pending-hover tw-text-white">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-pending-pressed tw-text-white">Pressed</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-pending-weak">Weak</div>
+                    </div>
+                </div>
+
+                <!-- Caution -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Caution</h4>
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-background-color-caution tw-text-white">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-caution-hover tw-text-white">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-caution-pressed tw-text-white">Pressed</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-caution-weak">Weak</div>
+                    </div>
+                </div>
+
+                <!-- Accent -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Accent</h4>
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-background-color-accent tw-text-white">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-accent-hover tw-text-white">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-accent-pressed tw-text-white">Pressed</div>
+                        <div class="tw-p-4 tw-rounded tw-background-color-accent-weak">Weak</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Border Colors Section -->
+        <section class="tw-mt-12">
+            <h2 class="tw-text-xl tw-font-bold tw-mb-4">Border Colors</h2>
+
+            <!-- Base Border Colors -->
+            <div class="color-section">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4">Base Border Colors</h3>
+                <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-strong">Strong</div>
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-supporting">Supporting</div>
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-base">Base</div>
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-hover">Hover</div>
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-pressed">Pressed</div>
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-weak">Weak</div>
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-disabled">Disabled</div>
+                    <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-on-fill-disabled">On Fill Disabled</div>
+                </div>
+            </div>
+
+            <!-- Status Border Colors -->
+            <div class="color-section tw-mt-6">
+                <h3 class="tw-text-lg tw-font-semibold tw-mb-4">Status Border Colors</h3>
+                
+                <!-- Brand -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Brand</h4>
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-brand">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-brand-hover">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-brand-pressed">Pressed</div>
+                    </div>
+                </div>
+
+                <!-- Success -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Success</h4>
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-success">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-success-hover">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-success-pressed">Pressed</div>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Information</h4>
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-information">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-information-hover">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-information-pressed">Pressed</div>
+                    </div>
+                </div>
+
+                <!-- Danger -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Danger</h4>
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-danger">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-danger-hover">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-danger-pressed">Pressed</div>
+                    </div>
+                </div>
+
+                <!-- Pending -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Pending</h4>
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-pending">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-pending-hover">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-pending-pressed">Pressed</div>
+                    </div>
+                </div>
+
+                <!-- Caution -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Caution</h4>
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-caution">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-caution-hover">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-caution-pressed">Pressed</div>
+                    </div>
+                </div>
+
+                <!-- Accent -->
+                <div class="tw-mb-6">
+                    <h4 class="tw-font-medium tw-mb-2">Accent</h4>
+                    <div class="tw-grid tw-grid-cols-3 tw-gap-4">
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-accent">Base</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-accent-hover">Hover</div>
+                        <div class="tw-p-4 tw-rounded tw-border-2 tw-border-color-accent-pressed">Pressed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-mb-8">
-            <h3 class="tw-font-bold tw-mb-6">Mushroom Scale</h3>
-            <div class="tw-flex tw-space-x-4">
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-50 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">50</span>
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">Mushroom Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mushroom-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-100 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">100</span>
+            </div>
+
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">blueberry Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-blueberry-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-200 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">200</span>
+            </div>
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">wintermelon Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-wintermelon-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-300 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">300</span>
+            </div>
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">carrot Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-carrot-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-400 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">400</span>
+            </div>
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">tomato Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-tomato-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-500 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">500</span>
+            </div>
+
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">mango Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-mango-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-600 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">600</span>
+            </div>
+
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">kangkong Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-kangkong-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-700 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">700</span>
+            </div>
+
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">white Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-white-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-800 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">800</span>
-                </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-900 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">900</span>
-                </div>
-                <div class="tw-flex tw-flex-col tw-items-center">
-                    <div
-                        class="tw-w-20 tw-h-20 tw-bg-mushroom-950 tw-rounded-lg tw-mb-2"
-                    ></div>
-                    <span class="tw-text-xs">950</span>
+            </div>
+
+            <div>
+                <h3 class="tw-font-bold tw-mb-6">ubas Scale</h3>
+                <div class="tw-flex tw-space-x-4">
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-50 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">50</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-100 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">100</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-200 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">200</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-300 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">300</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-400 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">400</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-500 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">500</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-600 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">600</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-700 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">700</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-800 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">800</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-900 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">900</span>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-items-center">
+                        <div
+                            class="tw-w-20 tw-h-20 tw-bg-ubas-950 tw-rounded-lg tw-mb-2"
+                        ></div>
+                        <span class="tw-text-xs">950</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-mb-8">
-            <h3 class="tw-font-bold tw-mb-6">Text Semantics</h3>
-            <div class="tw-flex tw-flex-col tw-space-y-4">
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-strong tw-font-bold tw-mr-4"
-                        >Strong</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-strong</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-supporting tw-font-bold tw-mr-4"
-                        >Supporting</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-supporting</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-base tw-font-bold tw-mr-4"
-                        >Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-weak tw-font-bold tw-mr-4"
-                        >Weak</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-weak</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-disabled tw-font-bold tw-mr-4"
-                        >Disabled</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-disabled</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-inverted-strong tw-font-bold tw-mr-4"
-                        >Inverted Strong</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-inverted-strong</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-inverted-base tw-font-bold tw-mr-4"
-                        >Inverted Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-inverted-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-inverted-weak tw-font-bold tw-mr-4"
-                        >Inverted Weak</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-inverted-weak</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-inverted-disabled tw-font-bold tw-mr-4"
-                        >Inverted Disabled</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-inverted-disabled</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-brand-base tw-font-bold tw-mr-4"
-                        >Brand Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-brand-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-success-base tw-font-bold tw-mr-4"
-                        >Success Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-success-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-information-base tw-font-bold tw-mr-4"
-                        >Information Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-information-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-danger-base tw-font-bold tw-mr-4"
-                        >Danger Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-danger-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-pending-base tw-font-bold tw-mr-4"
-                        >Pending Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-pending-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span
-                        class="tw-text-color-caution-base tw-font-bold tw-mr-4"
-                        >Caution Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-caution-base</span
-                    >
-                </div>
-                <div class="tw-flex tw-items-center">
-                    <span class="tw-text-color-accent-base tw-font-bold tw-mr-4"
-                        >Accent Base</span
-                    >
-                    <span class="tw-text-xs tw-text-mushroom-400"
-                        >tw-text-color-accent-base</span
-                    >
-                </div>
-            </div>
-        </div>
+
+        
     </body>
 </html>

@@ -44,14 +44,22 @@ StyleDictionary.registerFormat({
     formatter: function ({ dictionary }) {
         const { tokens } = dictionary;
 
-        // Format colors
-        const colors = {};
-        Object.entries(tokens.color).forEach(([colorName, shades]) => {
-            colors[colorName] = {};
-            Object.entries(shades).forEach(([shade, value]) => {
-                colors[colorName][shade] = value.value;
+        // Format colors - Update this section
+        const formatColorRecursively = (obj) => {
+            const result = {};
+            Object.entries(obj).forEach(([key, value]) => {
+                if (value.value) {
+                    // If it's a token with a value property
+                    result[key] = value.value;
+                } else {
+                    // If it's a nested object
+                    result[key] = formatColorRecursively(value);
+                }
             });
-        });
+            return result;
+        };
+
+        const colors = formatColorRecursively(tokens.color);
 
         const theme = {
             fontFamily: {
@@ -101,6 +109,124 @@ StyleDictionary.registerTransformGroup({
     transforms: ["attribute/cti", "size/px", "name/cti/kebab"],
 });
 
+// Add iOS specific transforms
+StyleDictionary.registerTransform({
+    name: "size/swift",
+    type: "value",
+    matcher: function (prop) {
+        return prop.value.toString().includes("px");
+    },
+    transformer: function (prop) {
+        return prop.value.replace("px", "");
+    },
+});
+
+// Add Android specific transforms
+StyleDictionary.registerTransform({
+    name: "size/dp",
+    type: "value",
+    matcher: function (prop) {
+        return prop.value.toString().includes("px");
+    },
+    transformer: function (prop) {
+        return prop.value.replace("px", "dp");
+    },
+});
+
+// Register transform groups for iOS and Android
+StyleDictionary.registerTransformGroup({
+    name: "ios",
+    transforms: ["attribute/cti", "size/swift", "name/cti/pascal"],
+});
+
+StyleDictionary.registerTransformGroup({
+    name: "android",
+    transforms: ["attribute/cti", "size/dp", "name/cti/snake"],
+});
+
+// Register iOS formats
+StyleDictionary.registerFormat({
+    name: "ios/colors.swift",
+    formatter: function ({ dictionary, file }) {
+        return `import UIKit
+
+public enum TokenColors {
+    ${dictionary.allProperties
+        .map((prop) => {
+            const color = prop.value;
+            if (color.startsWith("#")) {
+                const r = parseInt(color.substr(1, 2), 16) / 255;
+                const g = parseInt(color.substr(3, 2), 16) / 255;
+                const b = parseInt(color.substr(5, 2), 16) / 255;
+                return `public static let ${prop.name} = UIColor(red: ${r}, green: ${g}, blue: ${b}, alpha: 1.0)`;
+            }
+            return "";
+        })
+        .filter(Boolean)
+        .join("\n    ")}
+}`;
+    },
+});
+
+StyleDictionary.registerFormat({
+    name: "ios/singleton.swift",
+    formatter: function ({ dictionary, file }) {
+        return `import UIKit
+
+public enum TokenTypography {
+    ${dictionary.allProperties
+        .map((prop) => {
+            if (prop.attributes.category === "font") {
+                return `public static let ${prop.name} = ${prop.value}`;
+            }
+            return "";
+        })
+        .filter(Boolean)
+        .join("\n    ")}
+}`;
+    },
+});
+
+// Register Android formats
+StyleDictionary.registerFormat({
+    name: "android/colors",
+    formatter: function ({ dictionary }) {
+        return `<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    ${dictionary.allProperties
+        .map((prop) => `<color name="${prop.name}">${prop.value}</color>`)
+        .join("\n    ")}
+</resources>`;
+    },
+});
+
+StyleDictionary.registerFormat({
+    name: "android/dimens",
+    formatter: function ({ dictionary }) {
+        return `<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    ${dictionary.allProperties
+        .map((prop) => `<dimen name="${prop.name}">${prop.value}</dimen>`)
+        .join("\n    ")}
+</resources>`;
+    },
+});
+
+StyleDictionary.registerFormat({
+    name: "android/resources",
+    formatter: function ({ dictionary }) {
+        return `<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    ${dictionary.allProperties
+        .map(
+            (prop) =>
+                `<item name="${prop.name}" type="style">${prop.value}</item>`
+        )
+        .join("\n    ")}
+</resources>`;
+    },
+});
+
 module.exports = {
     source: ["src/tokens/**/*.json"],
     platforms: {
@@ -122,6 +248,65 @@ module.exports = {
                 {
                     destination: "theme.js",
                     format: "tailwind/theme",
+                },
+            ],
+        },
+        ios: {
+            transformGroup: "ios",
+            buildPath: "dist/ios/",
+            files: [
+                {
+                    destination: "TokenColors.swift",
+                    format: "ios/colors.swift",
+                    className: "TokenColors",
+                    filter: {
+                        attributes: {
+                            category: "color",
+                        },
+                    },
+                },
+                {
+                    destination: "TokenTypography.swift",
+                    format: "ios/singleton.swift",
+                    className: "TokenTypography",
+                    filter: {
+                        attributes: {
+                            category: "font",
+                        },
+                    },
+                },
+            ],
+        },
+        android: {
+            transformGroup: "android",
+            buildPath: "dist/android/",
+            files: [
+                {
+                    destination: "colors.xml",
+                    format: "android/colors",
+                    filter: {
+                        attributes: {
+                            category: "color",
+                        },
+                    },
+                },
+                {
+                    destination: "font_dimens.xml",
+                    format: "android/dimens",
+                    filter: {
+                        attributes: {
+                            category: "font",
+                        },
+                    },
+                },
+                {
+                    destination: "typography.xml",
+                    format: "android/resources",
+                    filter: {
+                        attributes: {
+                            category: "typography",
+                        },
+                    },
                 },
             ],
         },
