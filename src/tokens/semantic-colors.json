@@ -215,7 +215,7 @@
             }
         },
         "background": {
-            "bg": {
+            "default": {
                 "value": {
                     "light": "{color.white.50.light}",
                     "dark": "{color.mushroom.50.dark}"
