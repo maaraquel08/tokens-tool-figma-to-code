@@ -1,312 +1,133 @@
 const StyleDictionary = require("style-dictionary");
 
-// Constants
-const FONT_FALLBACKS = {
-    Rubik: "sans-serif",
-    Roboto: "sans-serif",
-    "Roboto Mono": "monospace",
-};
-
-// Helper functions
-function formatTokens(tokenGroup) {
-    const result = {};
-    for (const [key, token] of Object.entries(tokenGroup)) {
-        result[key] = token.value;
-    }
-    return result;
-}
-
-function formatFontFamilies(families) {
-    const result = {};
-    for (const [key, token] of Object.entries(families)) {
-        result[key] = [token.value, FONT_FALLBACKS[token.value]];
-    }
-    return result;
-}
-
-function formatTypographyPresets(typography) {
-    const result = {};
-    for (const [key, token] of Object.entries(typography)) {
-        result[key] = {
-            fontFamily: token.fontFamily.value,
-            fontSize: token.fontSize.value,
-            lineHeight: token.lineHeight.value,
-            fontWeight: token.fontWeight.value,
-            letterSpacing: token.letterSpacing.value,
+// Register a custom transform to handle references
+StyleDictionary.registerTransform({
+    name: "resolve/color",
+    type: "value",
+    matcher: (token) => {
+        return token.path[0] === "color" && token.path[1] === "text";
+    },
+    transformer: (token) => {
+        return {
+            light: token.original.value.light,
+            dark: token.original.value.dark,
         };
-    }
-    return result;
-}
+    },
+});
 
-// Register custom format for Tailwind
+// CSS Variables formatter
 StyleDictionary.registerFormat({
-    name: "tailwind/theme",
+    name: "css/variables",
     formatter: function ({ dictionary }) {
-        const { tokens } = dictionary;
+        const variables = dictionary.allTokens
+            .map((token) => {
+                const type = token.path[1];
+                const path = token.path.slice(2).join("-");
+                const cssVariable = `--color-${type}-${path}`;
 
-        // Format colors - Update this section
-        const formatColorRecursively = (obj) => {
-            const result = {};
-            Object.entries(obj).forEach(([key, value]) => {
-                if (value.value) {
-                    // If it's a token with a value property
-                    result[key] = value.value;
-                } else {
-                    // If it's a nested object
-                    result[key] = formatColorRecursively(value);
-                }
-            });
-            return result;
+                return `  ${cssVariable}: ${token.value.light};`;
+            })
+            .join("\n");
+
+        const darkVariables = dictionary.allTokens
+            .map((token) => {
+                const type = token.path[1];
+                const path = token.path.slice(2).join("-");
+                const cssVariable = `--color-${type}-${path}`;
+
+                return `  ${cssVariable}: ${token.value.dark};`;
+            })
+            .join("\n");
+
+        return `:root {\n${variables}\n}\n\n[data-theme="dark"] {\n${darkVariables}\n}`;
+    },
+});
+
+// Tailwind theme formatter
+StyleDictionary.registerFormat({
+    name: "javascript/tailwind",
+    formatter: function ({ dictionary }) {
+        // Helper function to build color structure based on type
+        const buildColorStructure = (colorType) => {
+            return dictionary.allTokens
+                .filter(
+                    (token) =>
+                        token.path[0] === "color" && token.path[1] === colorType
+                )
+                .reduce((acc, token) => {
+                    const tokenPath = token.path.slice(2);
+                    let current = acc;
+
+                    tokenPath.forEach((path, index) => {
+                        if (index === tokenPath.length - 1) {
+                            current[
+                                path
+                            ] = `var(--color-${colorType}-${tokenPath.join(
+                                "-"
+                            )})`;
+                        } else {
+                            current[path] = current[path] || {};
+                            current = current[path];
+                        }
+                    });
+
+                    return acc;
+                }, {});
         };
-
-        const colors = formatColorRecursively(tokens.color);
 
         const theme = {
-            fontFamily: {
-                main: ["Rubik", "sans-serif"],
-                inbound: ["Roboto", "sans-serif"],
-                code: ["Roboto Mono", "monospace"],
+            extend: {
+                // Text colors from color.text.*
+                textColor: buildColorStructure("text"),
+                // Background colors from color.background.*
+                backgroundColor: buildColorStructure("background"),
+                // Border colors from color.border.*
+                borderColor: buildColorStructure("border"),
             },
-            fontSize: formatTokens(tokens.font.size),
-            lineHeight: formatTokens(tokens.font.lineHeight),
-            letterSpacing: formatTokens(tokens.font.letterSpacing),
-            fontWeight: formatTokens(tokens.font.weight),
-            typography: formatTypographyPresets(tokens.typography),
-            colors: colors,
         };
 
-        return `module.exports = {
-    theme: {
-        extend: {
-            fontFamily: ${JSON.stringify(theme.fontFamily, null, 4)},
-            fontSize: ${JSON.stringify(theme.fontSize, null, 4)},
-            lineHeight: ${JSON.stringify(theme.lineHeight, null, 4)},
-            letterSpacing: ${JSON.stringify(theme.letterSpacing, null, 4)},
-            fontWeight: ${JSON.stringify(theme.fontWeight, null, 4)},
-            typography: ${JSON.stringify(theme.typography, null, 4)},
-            colors: ${JSON.stringify(theme.colors, null, 4)}
-        }
-    }
-};`;
-    },
-});
-
-// Add custom transform for handling pixel values
-StyleDictionary.registerTransform({
-    name: "size/px",
-    type: "value",
-    matcher: function (prop) {
-        return prop.value.toString().includes("px");
-    },
-    transformer: function (prop) {
-        return prop.value.toString();
-    },
-});
-
-// Register transform group for web
-StyleDictionary.registerTransformGroup({
-    name: "web",
-    transforms: ["attribute/cti", "size/px", "name/cti/kebab"],
-});
-
-// Add iOS specific transforms
-StyleDictionary.registerTransform({
-    name: "size/swift",
-    type: "value",
-    matcher: function (prop) {
-        return prop.value.toString().includes("px");
-    },
-    transformer: function (prop) {
-        return prop.value.replace("px", "");
-    },
-});
-
-// Add Android specific transforms
-StyleDictionary.registerTransform({
-    name: "size/dp",
-    type: "value",
-    matcher: function (prop) {
-        return prop.value.toString().includes("px");
-    },
-    transformer: function (prop) {
-        return prop.value.replace("px", "dp");
-    },
-});
-
-// Register transform groups for iOS and Android
-StyleDictionary.registerTransformGroup({
-    name: "ios",
-    transforms: ["attribute/cti", "size/swift", "name/cti/pascal"],
-});
-
-StyleDictionary.registerTransformGroup({
-    name: "android",
-    transforms: ["attribute/cti", "size/dp", "name/cti/snake"],
-});
-
-// Register iOS formats
-StyleDictionary.registerFormat({
-    name: "ios/colors.swift",
-    formatter: function ({ dictionary, file }) {
-        return `import UIKit
-
-public enum TokenColors {
-    ${dictionary.allProperties
-        .map((prop) => {
-            const color = prop.value;
-            if (color.startsWith("#")) {
-                const r = parseInt(color.substr(1, 2), 16) / 255;
-                const g = parseInt(color.substr(3, 2), 16) / 255;
-                const b = parseInt(color.substr(5, 2), 16) / 255;
-                return `public static let ${prop.name} = UIColor(red: ${r}, green: ${g}, blue: ${b}, alpha: 1.0)`;
-            }
-            return "";
-        })
-        .filter(Boolean)
-        .join("\n    ")}
-}`;
-    },
-});
-
-StyleDictionary.registerFormat({
-    name: "ios/singleton.swift",
-    formatter: function ({ dictionary, file }) {
-        return `import UIKit
-
-public enum TokenTypography {
-    ${dictionary.allProperties
-        .map((prop) => {
-            if (prop.attributes.category === "font") {
-                return `public static let ${prop.name} = ${prop.value}`;
-            }
-            return "";
-        })
-        .filter(Boolean)
-        .join("\n    ")}
-}`;
-    },
-});
-
-// Register Android formats
-StyleDictionary.registerFormat({
-    name: "android/colors",
-    formatter: function ({ dictionary }) {
-        return `<?xml version="1.0" encoding="UTF-8"?>
-<resources>
-    ${dictionary.allProperties
-        .map((prop) => `<color name="${prop.name}">${prop.value}</color>`)
-        .join("\n    ")}
-</resources>`;
-    },
-});
-
-StyleDictionary.registerFormat({
-    name: "android/dimens",
-    formatter: function ({ dictionary }) {
-        return `<?xml version="1.0" encoding="UTF-8"?>
-<resources>
-    ${dictionary.allProperties
-        .map((prop) => `<dimen name="${prop.name}">${prop.value}</dimen>`)
-        .join("\n    ")}
-</resources>`;
-    },
-});
-
-StyleDictionary.registerFormat({
-    name: "android/resources",
-    formatter: function ({ dictionary }) {
-        return `<?xml version="1.0" encoding="UTF-8"?>
-<resources>
-    ${dictionary.allProperties
-        .map(
-            (prop) =>
-                `<item name="${prop.name}" type="style">${prop.value}</item>`
-        )
-        .join("\n    ")}
-</resources>`;
+        return `module.exports = ${JSON.stringify(theme, null, 2)}`;
     },
 });
 
 module.exports = {
-    source: ["src/tokens/**/*.json"],
+    source: ["src/tokens/colors.json", "src/tokens/semantic-colors.json"],
     platforms: {
         css: {
+            transformGroup: "css",
+            transforms: [
+                "attribute/cti",
+                "name/cti/kebab",
+                "time/seconds",
+                "content/icon",
+                "size/rem",
+                "color/css",
+                "resolve/color",
+            ],
             buildPath: "dist/css/",
-            transformGroup: "web",
             files: [
                 {
                     destination: "tokens.css",
                     format: "css/variables",
-                    options: { selector: ":root" },
                 },
             ],
         },
         tailwind: {
+            transformGroup: "js",
+            transforms: [
+                "attribute/cti",
+                "name/cti/kebab",
+                "time/seconds",
+                "content/icon",
+                "size/rem",
+                "color/css",
+                "resolve/color",
+            ],
             buildPath: "dist/tailwind/",
-            transformGroup: "web",
             files: [
                 {
                     destination: "theme.js",
-                    format: "tailwind/theme",
-                },
-            ],
-        },
-        ios: {
-            transformGroup: "ios",
-            buildPath: "dist/ios/",
-            files: [
-                {
-                    destination: "TokenColors.swift",
-                    format: "ios/colors.swift",
-                    className: "TokenColors",
-                    filter: {
-                        attributes: {
-                            category: "color",
-                        },
-                    },
-                },
-                {
-                    destination: "TokenTypography.swift",
-                    format: "ios/singleton.swift",
-                    className: "TokenTypography",
-                    filter: {
-                        attributes: {
-                            category: "font",
-                        },
-                    },
-                },
-            ],
-        },
-        android: {
-            transformGroup: "android",
-            buildPath: "dist/android/",
-            files: [
-                {
-                    destination: "colors.xml",
-                    format: "android/colors",
-                    filter: {
-                        attributes: {
-                            category: "color",
-                        },
-                    },
-                },
-                {
-                    destination: "font_dimens.xml",
-                    format: "android/dimens",
-                    filter: {
-                        attributes: {
-                            category: "font",
-                        },
-                    },
-                },
-                {
-                    destination: "typography.xml",
-                    format: "android/resources",
-                    filter: {
-                        attributes: {
-                            category: "typography",
-                        },
-                    },
+                    format: "javascript/tailwind",
                 },
             ],
         },
