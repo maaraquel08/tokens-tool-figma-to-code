@@ -55,12 +55,6 @@
                         "light": "{color.kangkong.900.light}",
                         "dark": "{color.kangkong.300.dark}"
                     }
-                },
-                "weak": {
-                    "value": {
-                        "light": "{color.kangkong.100.light}",
-                        "dark": "{color.kangkong.900.dark}"
-                    }
                 }
             },
             "success": {
@@ -101,12 +95,6 @@
                         "light": "{color.blueberry.800.light}",
                         "dark": "{color.blueberry.300.dark}"
                     }
-                },
-                "weak": {
-                    "value": {
-                        "light": "{color.blueberry.100.light}",
-                        "dark": "{color.blueberry.800.dark}"
-                    }
                 }
             },
             "danger": {
@@ -126,12 +114,6 @@
                     "value": {
                         "light": "{color.tomato.800.light}",
                         "dark": "{color.tomato.300.dark}"
-                    }
-                },
-                "weak": {
-                    "value": {
-                        "light": "{color.tomato.100.light}",
-                        "dark": "{color.tomato.900.dark}"
                     }
                 }
             },
@@ -153,12 +135,6 @@
                         "light": "{color.mango.700.light}",
                         "dark": "{color.mango.300.dark}"
                     }
-                },
-                "weak": {
-                    "value": {
-                        "light": "{color.mango.100.light}",
-                        "dark": "{color.mango.900.dark}"
-                    }
                 }
             },
             "caution": {
@@ -179,12 +155,6 @@
                         "light": "{color.carrot.700.light}",
                         "dark": "{color.carrot.300.dark}"
                     }
-                },
-                "weak": {
-                    "value": {
-                        "light": "{color.carrot.100.light}",
-                        "dark": "{color.carrot.900.dark}"
-                    }
                 }
             },
             "accent": {
@@ -204,12 +174,6 @@
                     "value": {
                         "light": "{color.wintermelon.900.light}",
                         "dark": "{color.wintermelon.400.dark}"
-                    }
-                },
-                "weak": {
-                    "value": {
-                        "light": "{color.wintermelon.100.light}",
-                        "dark": "{color.wintermelon.900.dark}"
                     }
                 }
             }

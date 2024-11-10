@@ -32,159 +32,607 @@
         </script>
     </head>
     <body class="tw-p-8 tw-bg-default">
-        <div class="tw-px-4 tw-py-2 tw-bg-brand-base">Hello</div>
-        <button
-            id="themeToggle"
-            class="theme-toggle tw-rounded-lg tw-border-2 tw-border-weak tw-text-sm tw-font-medium tw-bg-brand-base tw-text-strong tw-px-4 tw-py-2"
-            onclick="toggleTheme()"
-        >
-            Switch Theme
-        </button>
-
-        <h1 class="tw-text-2xl tw-font-bold tw-mb-6 tw-text-text-supporting">
-            Semantic Colors Showcase
-        </h1>
-
-        <div class="tw-text-strong">Strong Text</div>
-        <div class="tw-text-supporting">Supporting Text</div>
-        <div class="tw-text-base">Base Text</div>
-
-        <div class="tw-mt-4">
-            <div class="tw-text-weak">Weak Text</div>
-            <div class="tw-text-disabled">Disabled Text</div>
-            <div class="tw-text-brand-base">Brand Base Text</div>
-            <div class="tw-text-brand-hover">Brand Hover Text</div>
-            <div class="tw-text-brand-pressed">Brand Pressed Text</div>
-            <div class="tw-text-success-base">Success Text</div>
-            <div class="tw-text-danger-base">Danger Text</div>
-
-            <!-- Background color examples -->
-            <div class="tw-bg-brand-base">Brand Background</div>
-            <div class="tw-bg-success-base">Success Background</div>
-
-            <!-- Border color examples -->
-            <div class="tw-border tw-border-brand-base">Brand Border</div>
-            <div class="tw-border tw-border-success-base">Success Border</div>
+        <div class="tw-flex tw-justify-between tw-items-center tw-mb-8">
+            <h1 class="tw-text-2xl tw-font-bold tw-text-strong">
+                Design System Colors
+            </h1>
+            <button
+                id="themeToggle"
+                class="theme-toggle tw-rounded-lg tw-border-2 tw-border-weak tw-text-sm tw-font-medium tw-bg-surface tw-text-strong tw-px-4 tw-py-2"
+                onclick="toggleTheme()"
+            >
+                Switch Theme
+            </button>
         </div>
 
-        <div class="tw-p-8">
-            <!-- Background Colors Test -->
-            <div class="tw-space-y-4">
-                <h2 class="tw-text-xl tw-font-bold tw-mb-4">
-                    Background Colors
-                </h2>
+        <!-- Background Colors -->
+        <section class="tw-mb-12">
+            <h2 class="tw-text-xl tw-font-bold tw-mb-6 tw-text-strong">
+                Background Colors
+            </h2>
 
-                <!-- Brand Colors -->
-                <div class="tw-space-y-2">
-                    <div class="tw-p-4 tw-bg-brand-base tw-text-white">
-                        Background Brand Base
+            <!-- Base Backgrounds -->
+            <div class="tw-mb-8">
+                <h3
+                    class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                >
+                    Base Backgrounds
+                </h3>
+                <div
+                    class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-4"
+                >
+                    <div
+                        class="tw-p-4 tw-bg-default tw-text-strong tw-rounded-lg tw-border tw-border-weak"
+                    >
+                        Default
                     </div>
-                    <div class="tw-p-4 tw-bg-brand-hover tw-text-white">
-                        Background Brand Hover
+                    <div
+                        class="tw-p-4 tw-bg-surface tw-text-strong tw-rounded-lg tw-border tw-border-weak"
+                    >
+                        Surface
                     </div>
-                    <div class="tw-p-4 tw-bg-brand-pressed tw-text-white">
-                        Background Brand Pressed
+                    <div
+                        class="tw-p-4 tw-bg-base tw-text-strong tw-rounded-lg tw-border tw-border-weak"
+                    >
+                        Base
                     </div>
-                    <div class="tw-p-4 tw-bg-brand-weak">
-                        Background Brand Weak
+                    <div
+                        class="tw-p-4 tw-bg-hover tw-text-strong tw-rounded-lg tw-border tw-border-weak"
+                    >
+                        Hover
                     </div>
-                </div>
-
-                <!-- Success Colors -->
-                <div class="tw-space-y-2">
-                    <div class="tw-p-4 tw-bg-success-base tw-text-white">
-                        Background Success Base
+                    <div
+                        class="tw-p-4 tw-bg-pressed tw-text-strong tw-rounded-lg tw-border tw-border-weak"
+                    >
+                        Pressed
                     </div>
-                    <div class="tw-p-4 tw-bg-success-hover tw-text-white">
-                        Background Success Hover
+                    <div
+                        class="tw-p-4 tw-bg-disabled tw-text-strong tw-rounded-lg tw-border tw-border-weak"
+                    >
+                        Disabled
                     </div>
-                    <div class="tw-p-4 tw-bg-success-pressed tw-text-white">
-                        Background Success Pressed
-                    </div>
-                    <div class="tw-p-4 tw-bg-success-weak">
-                        Background Success Weak
-                    </div>
-                </div>
-
-                <!-- Danger Colors -->
-                <div class="tw-space-y-2">
-                    <div class="tw-p-4 tw-bg-danger-base tw-text-white">
-                        Background Danger Base
-                    </div>
-                    <div class="tw-p-4 tw-bg-danger-hover tw-text-white">
-                        Background Danger Hover
-                    </div>
-                    <div class="tw-p-4 tw-bg-danger-pressed tw-text-white">
-                        Background Danger Pressed
-                    </div>
-                    <div class="tw-p-4 tw-bg-danger-weak">
-                        Background Danger Weak
-                    </div>
-                </div>
-
-                <!-- Basic Background Colors -->
-                <div class="tw-space-y-2">
-                    <div class="tw-p-4 tw-bg-bg">Background BG</div>
-                    <div class="tw-p-4 tw-bg-surface">Background Surface</div>
-                    <div class="tw-p-4 tw-bg-base">Background Base</div>
-                    <div class="tw-p-4 tw-bg-hover">Background Hover</div>
-                    <div class="tw-p-4 tw-bg-pressed">Background Pressed</div>
-                    <div class="tw-p-4 tw-bg-disabled">Background Disabled</div>
                 </div>
             </div>
 
-            <!-- Text Colors Test -->
-            <div class="tw-mt-8 tw-space-y-4">
-                <h2 class="tw-text-xl tw-font-bold tw-mb-4">Text Colors</h2>
-
-                <div class="tw-space-y-2">
-                    <div class="tw-text-strong">Text Strong</div>
-                    <div class="tw-text-supporting">Text Supporting</div>
-                    <div class="tw-text-base">Text Base</div>
-                    <div class="tw-text-weak">Text Weak</div>
-                    <div class="tw-text-disabled">Text Disabled</div>
+            <!-- Status Backgrounds -->
+            <div class="tw-space-y-8">
+                <!-- Brand -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Brand
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-bg-brand-base tw-text-white tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-brand-hover tw-text-white tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-brand-pressed tw-text-white tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div class="tw-p-4 tw-bg-brand-weak tw-rounded-lg">
+                            Weak
+                        </div>
+                    </div>
                 </div>
 
-                <div class="tw-space-y-2">
-                    <div class="tw-text-brand-base">Text Brand Base</div>
-                    <div class="tw-text-brand-hover">Text Brand Hover</div>
-                    <div class="tw-text-brand-pressed">Text Brand Pressed</div>
-                    <div class="tw-text-brand-weak">Text Brand Weak</div>
+                <!-- Success -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Success
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-bg-success-base tw-text-white tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-success-hover tw-text-white tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-success-pressed tw-text-white tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div class="tw-p-4 tw-bg-success-weak tw-rounded-lg">
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Information
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-bg-information-base tw-text-white tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-information-hover tw-text-white tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-information-pressed tw-text-white tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-information-weak tw-rounded-lg"
+                        >
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Danger -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Danger
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-bg-danger-base tw-text-white tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-danger-hover tw-text-white tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-danger-pressed tw-text-white tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div class="tw-p-4 tw-bg-danger-weak tw-rounded-lg">
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warning -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Warning
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-bg-pending-base tw-text-white tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-pending-hover tw-text-white tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-pending-pressed tw-text-white tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div class="tw-p-4 tw-bg-pending-weak tw-rounded-lg">
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caution -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Caution
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-bg-caution-base tw-text-white tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-caution-hover tw-text-white tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-caution-pressed tw-text-white tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div class="tw-p-4 tw-bg-caution-weak tw-rounded-lg">
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Caution
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-bg-accent-base tw-text-white tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-accent-hover tw-text-white tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-bg-accent-pressed tw-text-white tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div class="tw-p-4 tw-bg-accent-weak tw-rounded-lg">
+                            Weak
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Text Colors -->
+        <section class="tw-mb-12">
+            <h2 class="tw-text-xl tw-font-bold tw-mb-6 tw-text-strong">
+                Text Colors
+            </h2>
+
+            <!-- Base Text -->
+            <div class="tw-mb-8">
+                <h3
+                    class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                >
+                    Base Text
+                </h3>
+                <div class="tw-space-y-4">
+                    <div class="tw-text-strong">Strong Text</div>
+                    <div class="tw-text-supporting">Supporting Text</div>
+                    <div class="tw-text-base">Base Text</div>
+                    <div class="tw-text-weak">Weak Text</div>
+                    <div class="tw-text-disabled">Disabled Text</div>
+                    <div class="tw-text-on-fill-disabled">
+                        On Fill Disabled Text
+                    </div>
                 </div>
             </div>
 
-            <!-- Border Colors Test -->
-            <div class="tw-mt-8 tw-space-y-4">
-                <h2 class="tw-text-xl tw-font-bold tw-mb-4">Border Colors</h2>
-
-                <div class="tw-space-y-2">
-                    <div class="tw-p-4 tw-border-2 tw-border-brand-base">
-                        Border Brand Base
-                    </div>
-                    <div class="tw-p-4 tw-border-2 tw-border-success-base">
-                        Border Success Base
-                    </div>
-                    <div class="tw-p-4 tw-border-2 tw-border-danger-base">
-                        Border Danger Base
+            <!-- Status Text -->
+            <div class="tw-space-y-8">
+                <!-- Brand -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Brand
+                    </h3>
+                    <div class="tw-space-y-4">
+                        <div class="tw-text-brand-base">Brand Base</div>
+                        <div class="tw-text-brand-hover">Brand Hover</div>
+                        <div class="tw-text-brand-pressed">Brand Pressed</div>
                     </div>
                 </div>
 
-                <div class="tw-space-y-2">
-                    <div class="tw-p-4 tw-border-2 tw-border-strong">
-                        Border Strong
+                <!-- Success -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Success
+                    </h3>
+                    <div class="tw-space-y-4">
+                        <div class="tw-text-success-base">Success Base</div>
+                        <div class="tw-text-success-hover">Success Hover</div>
+                        <div class="tw-text-success-pressed">
+                            Success Pressed
+                        </div>
                     </div>
-                    <div class="tw-p-4 tw-border-2 tw-border-base">
-                        Border Base
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Information
+                    </h3>
+                    <div class="tw-space-y-4">
+                        <div class="tw-text-information-base">
+                            Information Base
+                        </div>
+                        <div class="tw-text-information-hover">
+                            Information Hover
+                        </div>
+                        <div class="tw-text-information-pressed">
+                            Information Pressed
+                        </div>
                     </div>
-                    <div class="tw-p-4 tw-border-2 tw-border-weak">
-                        Border Weak
+                </div>
+
+                <!-- Danger -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Danger
+                    </h3>
+                    <div class="tw-space-y-4">
+                        <div class="tw-text-danger-base">Danger Base</div>
+                        <div class="tw-text-danger-hover">Danger Hover</div>
+                        <div class="tw-text-danger-pressed">Danger Pressed</div>
                     </div>
-                    <div class="tw-p-4 tw-border-2 tw-border-disabled">
-                        Border Disabled
+                </div>
+
+                <!-- Warning -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Pending
+                    </h3>
+                    <div class="tw-space-y-4">
+                        <div class="tw-text-pending-base">Pending Base</div>
+                        <div class="tw-text-pending-hover">pending Hover</div>
+                        <div class="tw-text-pending-pressed">
+                            pending Pressed
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Border Colors -->
+        <section>
+            <h2 class="tw-text-xl tw-font-bold tw-mb-6 tw-text-strong">
+                Border Colors
+            </h2>
+
+            <!-- Base Borders -->
+            <div class="tw-mb-8">
+                <h3
+                    class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                >
+                    Base Borders
+                </h3>
+                <div
+                    class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-4"
+                >
+                    <div
+                        class="tw-p-4 tw-border-2 tw-border-strong tw-rounded-lg"
+                    >
+                        Strong Border
+                    </div>
+                    <div
+                        class="tw-p-4 tw-border-2 tw-border-base tw-rounded-lg"
+                    >
+                        Base Border
+                    </div>
+                    <div
+                        class="tw-p-4 tw-border-2 tw-border-weak tw-rounded-lg"
+                    >
+                        Weak Border
+                    </div>
+                    <div
+                        class="tw-p-4 tw-border-2 tw-border-disabled tw-rounded-lg"
+                    >
+                        Disabled Border
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Borders -->
+            <div class="tw-space-y-8">
+                <!-- Brand -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Brand
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-brand-base tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-brand-hover tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-brand-pressed tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-brand-weak tw-rounded-lg"
+                        >
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Success
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-success-base tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-success-hover tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-success-pressed tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-success-weak tw-rounded-lg"
+                        >
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Information
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-information-base tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-information-hover tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-information-pressed tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-information-weak tw-rounded-lg"
+                        >
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Danger -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Danger
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-danger-base tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-danger-hover tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-danger-pressed tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-danger-weak tw-rounded-lg"
+                        >
+                            Weak
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending -->
+                <div>
+                    <h3
+                        class="tw-text-lg tw-font-semibold tw-mb-4 tw-text-supporting"
+                    >
+                        Pending
+                    </h3>
+                    <div
+                        class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4"
+                    >
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-pending-base tw-rounded-lg"
+                        >
+                            Base
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-pending-hover tw-rounded-lg"
+                        >
+                            Hover
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-pending-pressed tw-rounded-lg"
+                        >
+                            Pressed
+                        </div>
+                        <div
+                            class="tw-p-4 tw-border-2 tw-border-pending-weak tw-rounded-lg"
+                        >
+                            Weak
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
 <script>
