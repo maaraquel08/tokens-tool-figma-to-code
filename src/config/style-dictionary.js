@@ -59,6 +59,8 @@ StyleDictionary.registerFormat({
     name: "css/variables",
     formatter: function ({ dictionary }) {
         const variables = dictionary.allTokens
+            // Only process tokens that start with 'color'
+            .filter((token) => token.path[0] === "color")
             .map((token) => {
                 const type = token.path[1];
                 const path = token.path.slice(2).join("-");
@@ -69,6 +71,8 @@ StyleDictionary.registerFormat({
             .join("\n");
 
         const darkVariables = dictionary.allTokens
+            // Only process tokens that start with 'color'
+            .filter((token) => token.path[0] === "color")
             .map((token) => {
                 const type = token.path[1];
                 const path = token.path.slice(2).join("-");
@@ -78,7 +82,15 @@ StyleDictionary.registerFormat({
             })
             .join("\n");
 
-        return `:root {\n${variables}\n}\n\n[data-theme="dark"] {\n${darkVariables}\n}`;
+        return [
+            ":root {",
+            variables,
+            "}",
+            "",
+            '[data-theme="dark"] {',
+            darkVariables,
+            "}",
+        ].join("\n");
     },
 });
 
@@ -186,8 +198,62 @@ StyleDictionary.registerFormat({
     },
 });
 
+// Add this new formatter for typography
+StyleDictionary.registerFormat({
+    name: "javascript/typography",
+    formatter: function ({ dictionary }) {
+        const tokens = dictionary.allTokens
+            .filter((token) => token.path[0] === "font")
+            .reduce((acc, token) => {
+                const category = token.path[1]; // size, lineHeight, etc.
+                const name = token.path[2]; // 100, 200, etc. or densest, denser, etc.
+
+                if (!acc[category]) {
+                    acc[category] = {};
+                }
+                acc[category][name] = token.value;
+
+                return acc;
+            }, {});
+
+        return `module.exports = ${JSON.stringify(
+            {
+                theme: {
+                    fontSize: tokens.size,
+                    lineHeight: tokens.lineHeight,
+                    letterSpacing: tokens.letterSpacing,
+                    fontWeight: tokens.weight,
+                    fontFamily: tokens.family,
+                },
+            },
+            null,
+            2
+        )}`;
+    },
+});
+
+// Add this formatter for typography CSS variables
+StyleDictionary.registerFormat({
+    name: "css/typography",
+    formatter: function ({ dictionary }) {
+        const variables = dictionary.allTokens
+            .filter((token) => token.path[0] === "font")
+            .map((token) => {
+                const path = token.path.join("-");
+                return `  --${path}: ${token.value};`;
+            })
+            .join("\n");
+
+        return [":root {", variables, "}"].join("\n");
+    },
+});
+
 module.exports = {
-    source: ["src/tokens/colors.json", "src/tokens/semantic-colors.json"],
+    source: [
+        "src/tokens/colors.json",
+        "src/tokens/semantic-colors.json",
+        "src/tokens/typography.json", // Add typography source
+    ],
     platforms: {
         css: {
             transformGroup: "css",
@@ -205,6 +271,10 @@ module.exports = {
                 {
                     destination: "tokens.css",
                     format: "css/variables",
+                },
+                {
+                    destination: "typography.css",
+                    format: "css/typography",
                 },
             ],
         },
@@ -224,6 +294,10 @@ module.exports = {
                 {
                     destination: "theme.js",
                     format: "javascript/tailwind",
+                },
+                {
+                    destination: "typography.js",
+                    format: "javascript/typography",
                 },
             ],
         },
