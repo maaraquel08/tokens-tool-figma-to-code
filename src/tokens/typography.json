@@ -49,14 +49,5 @@
             "wider": { "value": "1px" },
             "widest": { "value": "1.3px" }
         }
-    },
-    "typography": {
-        "heading-xl": {
-            "fontFamily": { "value": "{font.family.main.value}" },
-            "fontWeight": { "value": "{font.weight.bold.value}" },
-            "fontSize": { "value": "{font.size.900.value}" },
-            "lineHeight": { "value": "{font.lineHeight.900.value}" },
-            "letterSpacing": { "value": "{font.letterSpacing.dense.value}" }
-        }
     }
 }
