@@ -1,25 +1,26 @@
-const typographyTheme = require("./dist/tailwind/theme.js");
+const tokens = require("./dist/tailwind/theme.js");
 const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    prefix: "tw-",
     content: [
+        "./index.html",
         "./src/**/*.{js,jsx,ts,tsx,html,css}",
         "./*.html",
-        "./test.html",
-        "./index.html",
+        // Add any other files that contain Tailwind classes
     ],
-    prefix: "tw-",
     theme: {
         extend: {
+            ...tokens.extend,
             fontFamily: {
                 main: ["Rubik", "sans-serif"],
                 inbound: ["Roboto", "sans-serif"],
                 code: ["Roboto Mono", "monospace"],
             },
-            ...typographyTheme.theme.extend,
         },
     },
+    darkMode: ["class", '[data-theme="dark"]'],
     plugins: [
         plugin(function ({ addComponents }) {
             addComponents({
