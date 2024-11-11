@@ -391,6 +391,102 @@ StyleDictionary.registerFormat({
     },
 });
 
+/* Spacing Tokens */
+
+// Register the CSS spacing format
+StyleDictionary.registerFormat({
+    name: "css/spacing",
+    formatter: function ({ dictionary }) {
+        return `
+:root {
+    /* Base size tokens */
+${dictionary.allTokens
+    .filter((token) => token.path[0] === "size" && token.path.length === 2)
+    .map((token) => `    --size-${token.path[1]}: ${token.value};`)
+    .join("\n")}
+
+    /* Spacing tokens */
+${dictionary.allTokens
+    .filter((token) => token.path[0] === "size" && token.path[1] === "spacing")
+    .map(
+        (token) =>
+            `    --size-spacing-${
+                token.path[2]
+            }: var(--size-${token.original.value
+                .replace("{size.", "")
+                .replace("}", "")});`
+    )
+    .join("\n")}
+
+    /* Max width tokens */
+${dictionary.allTokens
+    .filter(
+        (token) => token.path[0] === "size" && token.path[1] === "max-width"
+    )
+    .map((token) => `    --size-max-width-${token.path[2]}: ${token.value};`)
+    .join("\n")}
+
+    /* Border radius tokens */
+${dictionary.allTokens
+    .filter(
+        (token) => token.path[0] === "size" && token.path[1] === "border-radius"
+    )
+    .map((token) => {
+        if (token.path[2] === "full") {
+            return `    --size-border-radius-${token.path[2]}: ${token.value};`;
+        }
+        return `    --size-border-radius-${
+            token.path[2]
+        }: var(--size-${token.original.value
+            .replace("{size.", "")
+            .replace("}", "")});`;
+    })
+    .join("\n")}
+}`;
+    },
+});
+
+// Register the JavaScript spacing format for Tailwind
+StyleDictionary.registerFormat({
+    name: "javascript/spacing",
+    formatter: function ({ dictionary }) {
+        const getSpacingTokens = () => {
+            return dictionary.allTokens
+                .filter(
+                    (token) =>
+                        token.path[0] === "size" && token.path[1] === "spacing"
+                )
+                .reduce((acc, token) => {
+                    // Make sure we capture all spacing tokens
+                    acc[token.path[2]] = `var(--size-spacing-${token.path[2]})`;
+                    return acc;
+                }, {});
+        };
+
+        const theme = {
+            extend: {
+                spacing: getSpacingTokens(),
+                maxWidth: {
+                    sm: "var(--size-max-width-sm)",
+                    md: "var(--size-max-width-md)",
+                    lg: "var(--size-max-width-lg)",
+                },
+                borderRadius: {
+                    "2xs": "var(--size-border-radius-2xs)",
+                    xs: "var(--size-border-radius-xs)",
+                    sm: "var(--size-border-radius-sm)",
+                    md: "var(--size-border-radius-md)",
+                    lg: "var(--size-border-radius-lg)",
+                    xl: "var(--size-border-radius-xl)",
+                    full: "var(--size-border-radius-full)",
+                },
+            },
+        };
+
+        return `module.exports = ${JSON.stringify(theme, null, 2)}`;
+    },
+});
+
 /**
  * Style Dictionary Configuration
  *
@@ -404,6 +500,8 @@ module.exports = {
         "src/tokens/colors.json", // Base color definitions
         "src/tokens/semantic-colors.json", // Semantic color mappings
         "src/tokens/typography.json", // Typography definitions
+        "src/tokens/size.json", // Add base size tokens
+        "src/tokens/semantic-spacing.json", // Add semantic spacing tokens
     ],
 
     // Platform-specific build configurations
@@ -431,6 +529,10 @@ module.exports = {
                     destination: "typography.css",
                     format: "css/typography",
                 },
+                {
+                    destination: "spacing.css",
+                    format: "css/spacing",
+                },
             ],
         },
 
@@ -455,6 +557,10 @@ module.exports = {
                 {
                     destination: "typography.js",
                     format: "javascript/typography",
+                },
+                {
+                    destination: "spacing.js",
+                    format: "javascript/spacing",
                 },
             ],
         },

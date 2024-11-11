@@ -6,6 +6,7 @@
 // Import generated token configurations
 const colorTokens = require("./dist/tailwind/theme.js");
 const typographyTokens = require("./dist/tailwind/typography.js");
+const spacingTokens = require("./dist/tailwind/spacing.js");
 const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
@@ -18,37 +19,24 @@ module.exports = {
         "./index.html",
         "./src/**/*.{js,jsx,ts,tsx,html,css}", // All source files
         "./*.html", // Root HTML files
+        "./test-spacing.html", // Add this explicitly if needed
     ],
 
     // Safelist ensures these patterns are always included in the build
     // even if they're not found in the content files
     safelist: [
-        // Typography Utilities
-        { pattern: /^tw-font-size-\d+$/ }, // e.g., tw-font-size-100
-        { pattern: /^tw-line-height-\d+$/ }, // e.g., tw-line-height-100
-        { pattern: /^tw-letter-spacing-/ }, // e.g., tw-letter-spacing-wide
-        { pattern: /^tw-font-weight-/ }, // e.g., tw-font-weight-bold
-
-        // Text Styles
-        { pattern: /^tw-heading-(xl|lg|md|sm|xs)$/ }, // Heading sizes
-        { pattern: /^tw-subheading-/ }, // Subheading styles
-        { pattern: /^tw-body-/ }, // Body text styles
-        { pattern: /^tw-label-/ }, // Label styles
-
-        // Composite Patterns
-        // Body text with size and weight variations
-        { pattern: /^tw-body-(lg|md|sm|xs)(-regular|-medium)?$/ },
-        // Label variations
-        { pattern: /^tw-label-(sm|xs)(-regular|-medium)?$/ },
-
-        // Font Families
-        { pattern: /^tw-font-(main|inbound|code)$/ },
-
-        // Font Weight Scale
+        // Only safelist custom and dynamic utilities
         {
-            pattern:
-                /^tw-font-weight-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)$/,
+            // Typography system
+            pattern: /^tw-(font-size|line-height|letter-spacing|font-weight)-/,
         },
+        {
+            // Custom spacing system
+            pattern:
+                /^tw-(p|m|gap)[trblxy]?-(6xs|5xs|4xs|3xs|2xs|xs|sm|md|lg|xl|2xl|3xl|4xl|5xl|6xl)$/,
+            variants: ["hover", "focus", "responsive"],
+        },
+        // ... other custom utilities
     ],
 
     // Theme Configuration
@@ -56,11 +44,15 @@ module.exports = {
         extend: {
             // Extend theme with our design tokens
             ...colorTokens.extend,
-            // Configure custom font families
+            ...spacingTokens.extend,
+            spacing: spacingTokens.extend.spacing,
+            maxWidth: spacingTokens.extend.maxWidth,
+            borderRadius: spacingTokens.extend.borderRadius,
+            gap: spacingTokens.extend.spacing,
             fontFamily: {
-                main: "var(--font-family-main)", // Primary font
-                inbound: "var(--font-family-inbound)", // Secondary font
-                code: "var(--font-family-code)", // Monospace font
+                main: "var(--font-family-main)",
+                inbound: "var(--font-family-inbound)",
+                code: "var(--font-family-code)",
             },
         },
     },
@@ -199,6 +191,19 @@ module.exports = {
                 // ... similar pattern for other label variations ...
             };
 
+            // Add spacing utilities if needed
+            const spacingUtilities = {
+                ".max-w-screen": {
+                    "max-width": "100vw",
+                },
+                ".w-screen": {
+                    width: "100vw",
+                },
+                ".h-screen": {
+                    height: "100vh",
+                },
+            };
+
             // Register all custom utilities with Tailwind
             addUtilities({
                 ...fontSizeUtilities,
@@ -209,6 +214,7 @@ module.exports = {
                 ...subheadingUtilities,
                 ...bodyTextUtilities,
                 ...labelUtilities,
+                ...spacingUtilities,
             });
         }),
     ],
