@@ -27,8 +27,8 @@
             },
             "disabled": {
                 "value": {
-                    "light": "{color.white.300.light}",
-                    "dark": "{color.white.300.dark}"
+                    "light": "{color.white.100.light}",
+                    "dark": "{color.white.100.dark}"
                 }
             },
             "on-fill-disabled": {
