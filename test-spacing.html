@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spacing Tokens Test</title>
+        <!-- Load CSS files -->
+        <link href="./dist/css/tokens.css" rel="stylesheet" />
+        <link href="./dist/css/spacing.css" rel="stylesheet" />
+        <link href="./dist/styles.css" rel="stylesheet" />
+
+        <style>
+            .demo-box {
+                background-color: #e2e8f0;
+                border: 1px solid #94a3b8;
+            }
+            .spacing-section {
+                margin-bottom: var(--size-400);
+                border: 1px solid #e2e8f0;
+                border-radius: var(--size-150);
+            }
+            .spacing-label {
+                font-family: monospace;
+                color: #64748b;
+                margin-bottom: var(--size-200);
+            }
+        </style>
+    </head>
+    <body class="tw-p-lg">
+        <h1 class="tw-text-2xl tw-mb-lg">Spacing System Tokens</h1>
+
+        <!-- Padding Scale -->
+        <section class="spacing-section tw-p-lg">
+            <h2 class="tw-text-xl tw-mb-md">Padding Scale</h2>
+            <div class="tw-space-y-sm">
+                <div class="spacing-label">Padding Examples:</div>
+                <div class="tw-flex tw-flex-wrap tw-gap-md">
+                    <div class="demo-box tw-p-6xs">6xs</div>
+                    <div class="demo-box tw-p-5xs">5xs</div>
+                    <div class="demo-box tw-p-4xs">4xs</div>
+                    <div class="demo-box tw-p-3xs">3xs</div>
+                    <div class="demo-box tw-p-2xs">2xs</div>
+                    <div class="demo-box tw-p-xs">xs</div>
+                    <div class="demo-box tw-p-sm">sm</div>
+                    <div class="demo-box tw-p-md">md</div>
+                    <div class="demo-box tw-p-lg">lg</div>
+                    <div class="demo-box tw-p-xl">xl</div>
+                    <div class="demo-box tw-p-2xl">2xl</div>
+                    <div class="demo-box tw-p-3xl">3xl</div>
+                    <div class="demo-box tw-p-4xl">4xl</div>
+                    <div class="demo-box tw-p-5xl">5xl</div>
+                    <div class="demo-box tw-p-6xl">6xl</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gap Scale -->
+        <section class="spacing-section tw-p-lg">
+            <h2 class="tw-text-xl tw-mb-md">Gap Scale</h2>
+
+            <div class="tw-flex tw-flex-col tw-gap-2xl">
+                <!-- 6xs -->
+                <div class="tw-flex tw-gap-6xs tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap 6xs</div>
+                    <div class="demo-box tw-p-sm">2px</div>
+                </div>
+
+                <!-- 5xs -->
+                <div class="tw-flex tw-gap-5xs tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap 5xs</div>
+                    <div class="demo-box tw-p-sm">4px</div>
+                </div>
+
+                <!-- 4xs -->
+                <div class="tw-flex tw-gap-4xs tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap 4xs</div>
+                    <div class="demo-box tw-p-sm">6px</div>
+                </div>
+
+                <!-- 3xs -->
+                <div class="tw-flex tw-gap-3xs tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap 3xs</div>
+                    <div class="demo-box tw-p-sm">8px</div>
+                </div>
+
+                <!-- 2xs -->
+                <div class="tw-flex tw-gap-2xs tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap 2xs</div>
+                    <div class="demo-box tw-p-sm">12px</div>
+                </div>
+
+                <!-- xs -->
+                <div class="tw-flex tw-gap-xs tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap xs</div>
+                    <div class="demo-box tw-p-sm">16px</div>
+                </div>
+
+                <!-- sm -->
+                <div class="tw-flex tw-gap-sm tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap sm</div>
+                    <div class="demo-box tw-p-sm">24px</div>
+                </div>
+
+                <!-- md -->
+                <div class="tw-flex tw-gap-md tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap md</div>
+                    <div class="demo-box tw-p-sm">32px</div>
+                </div>
+
+                <!-- lg -->
+                <div class="tw-flex tw-gap-lg tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap lg</div>
+                    <div class="demo-box tw-p-sm">48px</div>
+                </div>
+
+                <!-- xl -->
+                <div class="tw-flex tw-gap-xl tw-items-center tw-w-48">
+                    <div class="demo-box tw-p-sm">Gap xl</div>
+                    <div class="demo-box tw-p-sm">64px</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Border Radius -->
+        <section class="spacing-section tw-p-lg">
+            <h2 class="tw-text-xl tw-mb-md">Border Radius Scale</h2>
+            <div class="tw-flex tw-flex-wrap tw-gap-md">
+                <div class="demo-box tw-p-lg tw-rounded-2xs">2xs</div>
+                <div class="demo-box tw-p-lg tw-rounded-xs">xs</div>
+                <div class="demo-box tw-p-lg tw-rounded-sm">sm</div>
+                <div class="demo-box tw-p-lg tw-rounded-md">md</div>
+                <div class="demo-box tw-p-lg tw-rounded-lg">lg</div>
+                <div class="demo-box tw-p-lg tw-rounded-xl">xl</div>
+                <div class="demo-box tw-p-lg tw-rounded-full">full</div>
+            </div>
+        </section>
+
+        <!-- Updated Max-Width section -->
+        <section class="spacing-section tw-p-lg">
+            <h2 class="tw-text-xl tw-mb-md">Max Width Scale</h2>
+            <div class="tw-space-y-md">
+                <div class="demo-box tw-max-w-sm tw-p-sm tw-text-center">
+                    Small Container (40rem / 640px)
+                </div>
+                <div class="demo-box tw-max-w-md tw-p-sm tw-text-center">
+                    Medium Container (62.5rem / 1000px)
+                </div>
+                <div class="demo-box tw-max-w-lg tw-p-sm tw-text-center">
+                    Large Container (82.5rem / 1320px)
+                </div>
+            </div>
+        </section>
+
+        <!-- Gap Examples -->
+        <section class="spacing-section tw-p-lg">
+            <h2 class="tw-text-xl tw-mb-md">Gap Examples</h2>
+            <div class="tw-space-y-lg">
+                <div class="tw-flex tw-gap-sm">
+                    <div class="demo-box tw-p-md">Gap</div>
+                    <div class="demo-box tw-p-md">sm</div>
+                    <div class="demo-box tw-p-md">(12px)</div>
+                </div>
+                <div class="tw-flex tw-gap-md">
+                    <div class="demo-box tw-p-md">Gap</div>
+                    <div class="demo-box tw-p-md">md</div>
+                    <div class="demo-box tw-p-md">(16px)</div>
+                </div>
+                <div class="tw-flex tw-gap-lg">
+                    <div class="demo-box tw-p-md">Gap</div>
+                    <div class="demo-box tw-p-md">lg</div>
+                    <div class="demo-box tw-p-md">(24px)</div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
